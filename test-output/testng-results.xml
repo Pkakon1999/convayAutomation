@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-03T17:47:03 BDT" name="Default suite" finished-at="2024-11-03T17:47:18 BDT" duration-ms="15066">
+    <groups>
+    </groups>
+    <test started-at="2024-11-03T17:47:03 BDT" name="Default test" finished-at="2024-11-03T17:47:18 BDT" duration-ms="15066">
+      <class name="TestCases.JoinMeetingWithMeetingLink">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.JoinMeetingWithMeetingLink@cc43f62]" started-at="2024-11-03T17:47:03 BDT" name="setup" finished-at="2024-11-03T17:47:07 BDT" duration-ms="4472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinMeetingWithMeetingLink@cc43f62]" started-at="2024-11-03T17:47:07 BDT" name="navigateToSignInPage" finished-at="2024-11-03T17:47:07 BDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToSignInPage -->
+        <test-method signature="JoinWithInvalidMeetingLink()[pri:2, instance:TestCases.JoinMeetingWithMeetingLink@cc43f62]" started-at="2024-11-03T17:47:07 BDT" name="JoinWithInvalidMeetingLink" finished-at="2024-11-03T17:47:17 BDT" duration-ms="10192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- JoinWithInvalidMeetingLink -->
+        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinMeetingWithMeetingLink@cc43f62]" started-at="2024-11-03T17:47:17 BDT" name="Aftermethod2" finished-at="2024-11-03T17:47:17 BDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=JoinWithInvalidMeetingLink status=SUCCESS method=JoinMeetingWithMeetingLink.JoinWithInvalidMeetingLink()[pri:2, instance:TestCases.JoinMeetingWithMeetingLink@cc43f62] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod2 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.JoinMeetingWithMeetingLink@cc43f62]" started-at="2024-11-03T17:47:17 BDT" name="teardown" finished-at="2024-11-03T17:47:18 BDT" duration-ms="340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.JoinMeetingWithMeetingLink -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

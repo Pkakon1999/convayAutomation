@@ -1,0 +1,86 @@
+package Page_Objects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+
+public class SuspendUser_Page {
+
+	WebDriver driver;
+	WebDriverWait wait;
+
+	// Define locators
+	By adminDropdown = By.xpath("//span[@class='submenu-arrow']");
+	By btn_ManageUsers = By.xpath("//span[normalize-space()='Manage Users']");
+	By StatusDropdown_loc = By.xpath("//div[@class='UnitType_userOptionPanel__3JDe3']//div[2]//div[1]//*[name()='svg']");
+	By SelectActive_loc = By.xpath("//label[normalize-space()='Active']");
+	By SelectSuspended_loc = By.xpath("//label[normalize-space()='Suspended']");
+	By btn_threeDot = By.xpath("//div[@id='cell-6-565c6424-db64-49dc-9e8e-5dc1edc2d7cc']//div[@data-tag='allowRowEvents']//span//span[@class='cnv-ml-1 UserManagement_threeDotBtn__PsohE'][normalize-space()='...']");
+	By btn_SuspendUser_loc = By.xpath("//span[@class='cnv-active']");
+	By text_Reason_loc = By.xpath("//textarea[@placeholder='Explain the reason for the suspension of this user (Optional)']");
+	By btn_confirmSuspension_loc = By.xpath("//button[normalize-space()='Confirm Suspension']");
+	By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");
+	
+
+	// Constructor
+	public SuspendUser_Page(WebDriver driver) {
+		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	}
+
+	// Method to click Admin dropdown
+	public void clickAdminDropdown() {
+		driver.findElement(adminDropdown).click();
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	}
+
+	// Method to click Manage Users
+	public void clickManageUsers() {
+		driver.findElement(btn_ManageUsers).click();
+	}
+
+	// Method to Status dropdown
+	public void roleDropdown() {
+		driver.findElement(StatusDropdown_loc).click();
+	}
+
+	// Method to filter active user
+	public void selectActive() {
+		driver.findElement(SelectActive_loc).click();
+	}
+
+	// Method to filter suspended User
+	public void selectSuspended() {
+		driver.findElement(SelectSuspended_loc).click();
+	}
+
+	// Method to Select 3 dot
+	public void select3dot() {
+		driver.findElement(btn_threeDot).click();
+	}
+
+	// Method to select suspend
+	public void selectSuspend() {
+		driver.findElement(btn_SuspendUser_loc).click();
+	}
+
+	// Method to add a reason of suspension
+	public void setReason(String confirm) {
+		driver.findElement(text_Reason_loc).sendKeys(confirm);
+	}
+
+	// Method to select confirm suspension
+	public void selectConfirmSuspension() {
+		driver.findElement(btn_confirmSuspension_loc).click();
+	}
+
+	public String getToasterValue() {
+		// Wait for the toaster message to be visible and return its text
+		WebElement toasterMessageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(toaster_Message));
+		return toasterMessageElement.getText();
+	}
+
+}
