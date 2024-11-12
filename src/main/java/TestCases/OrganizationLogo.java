@@ -40,7 +40,7 @@ public class OrganizationLogo {
 		driver.manage().window().maximize();
 
 		// Setup Excel file
-		File excelFile = new File("D:\\Convay_Automation\\AutomationTest\\TestData\\TestDataFile.xlsx");
+		File excelFile = new File("TestData\\TestDataFile.xlsx");
 		FileInputStream inputStream = new FileInputStream(excelFile);
 
 		// Load the workbook and sheet
@@ -82,7 +82,7 @@ public class OrganizationLogo {
 		Thread.sleep(2000);
 
 		// Correct the path to the logo
-		String logo = "D:\\Convay_Automation\\AutomationTest\\TestData\\convay1.png";
+		String logo = "TestData\\convay1.png";
 
 		// Upload the logo by sending the file path directly to the input element
 		organizationLogo.uploadProfilePicture(logo);

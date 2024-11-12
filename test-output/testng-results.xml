@@ -1,377 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="2" skipped="1">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-12T12:42:56 BDT" name="Default suite" finished-at="2024-11-12T12:43:22 BDT" duration-ms="26735">
+  <suite started-at="2024-11-12T17:01:34 BDT" name="Default suite" finished-at="2024-11-12T17:02:29 BDT" duration-ms="54157">
     <groups>
     </groups>
-    <test started-at="2024-11-12T12:42:56 BDT" name="Default test" finished-at="2024-11-12T12:43:22 BDT" duration-ms="26735">
+    <test started-at="2024-11-12T17:01:34 BDT" name="Default test" finished-at="2024-11-12T17:02:29 BDT" duration-ms="54157">
       <class name="TestCases.JoinInstantMeeting">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:42:56 BDT" name="setup" finished-at="2024-11-12T12:43:03 BDT" duration-ms="7608" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:01:34 BDT" name="setup" finished-at="2024-11-12T17:01:38 BDT" duration-ms="3803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:03 BDT" name="navigateToSignInPage" finished-at="2024-11-12T12:43:06 BDT" duration-ms="2828" status="PASS">
+        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:01:38 BDT" name="navigateToSignInPage" finished-at="2024-11-12T17:01:42 BDT" duration-ms="4293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToSignInPage -->
-        <test-method signature="JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:06 BDT" name="JoinWithMeetingID" finished-at="2024-11-12T12:43:16 BDT" duration-ms="10062" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'cnv-btn-jon Join_joinButton__1eAPJ')]"}
-  (Session info: chrome=130.0.6723.117)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4319675e72bd91b4f872559a2f94996, findElement {value=//div[contains(@class,'cnv-btn-jon Join_joinButton__1eAPJ')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53511}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53511/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b4319675e72bd91b4f872559a2f94996]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'cnv-btn-jon Join_joinButton__1eAPJ')]"}
-  (Session info: chrome=130.0.6723.117)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4319675e72bd91b4f872559a2f94996, findElement {value=//div[contains(@class,'cnv-btn-jon Join_joinButton__1eAPJ')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53511}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53511/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b4319675e72bd91b4f872559a2f94996
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at Page_Objects.JoinInstantMeeting_Page.clickJoinMeeting(JoinInstantMeeting_Page.java:24)
-at TestCases.JoinInstantMeeting.JoinWithMeetingID(JoinInstantMeeting.java:84)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:01:42 BDT" name="JoinWithMeetingID" finished-at="2024-11-12T17:02:00 BDT" duration-ms="17723" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- JoinWithMeetingID -->
-        <test-method is-config="true" signature="Aftermethod1(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:16 BDT" name="Aftermethod1" finished-at="2024-11-12T12:43:17 BDT" duration-ms="316" status="PASS">
+        <test-method is-config="true" signature="Aftermethod1(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:00 BDT" name="Aftermethod1" finished-at="2024-11-12T17:02:00 BDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=JoinWithMeetingID status=FAILURE method=JoinInstantMeeting.JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+                <![CDATA[[TestResult name=JoinWithMeetingID status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Aftermethod1 -->
-        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:17 BDT" name="Aftermethod2" finished-at="2024-11-12T12:43:17 BDT" duration-ms="266" status="PASS">
+        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:00 BDT" name="Aftermethod2" finished-at="2024-11-12T17:02:00 BDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=JoinWithMeetingID status=FAILURE method=JoinInstantMeeting.JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+                <![CDATA[[TestResult name=JoinWithMeetingID status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Aftermethod2 -->
-        <test-method is-config="true" signature="Aftermethod3(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:17 BDT" name="Aftermethod3" finished-at="2024-11-12T12:43:17 BDT" duration-ms="238" status="PASS">
+        <test-method is-config="true" signature="Aftermethod3(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:00 BDT" name="Aftermethod3" finished-at="2024-11-12T17:02:00 BDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=JoinWithMeetingID status=FAILURE method=JoinInstantMeeting.JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+                <![CDATA[[TestResult name=JoinWithMeetingID status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Aftermethod3 -->
-        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:17 BDT" name="navigateToSignInPage" finished-at="2024-11-12T12:43:18 BDT" duration-ms="620" status="PASS">
+        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:00 BDT" name="navigateToSignInPage" finished-at="2024-11-12T17:02:02 BDT" duration-ms="1269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToSignInPage -->
-        <test-method signature="JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:18 BDT" name="JoinWithMeetingLink" finished-at="2024-11-12T12:43:22 BDT" duration-ms="4513" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to find element with locator By.xpath: //div[contains(@class,'cnv-btn-jon Join_joinButton__1eAPJ')]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //div[contains(@class,'cnv-btn-jon Join_joinButton__1eAPJ')]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at Page_Objects.JoinInstantMeeting_Page.clickJoinMeeting(JoinInstantMeeting_Page.java:24)
-at TestCases.JoinInstantMeeting.JoinWithMeetingLink(JoinInstantMeeting.java:113)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:02 BDT" name="JoinWithMeetingLink" finished-at="2024-11-12T17:02:12 BDT" duration-ms="10460" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- JoinWithMeetingLink -->
-        <test-method is-config="true" signature="Aftermethod1(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:22 BDT" name="Aftermethod1" finished-at="2024-11-12T12:43:22 BDT" duration-ms="89" status="FAIL">
+        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:12 BDT" name="Aftermethod2" finished-at="2024-11-12T17:02:12 BDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=JoinWithMeetingLink status=FAILURE method=JoinInstantMeeting.JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+                <![CDATA[[TestResult name=JoinWithMeetingLink status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=130.0.6723.117)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4319675e72bd91b4f872559a2f94996, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53511}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53511/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b4319675e72bd91b4f872559a2f94996]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=130.0.6723.117)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4319675e72bd91b4f872559a2f94996, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53511}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53511/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b4319675e72bd91b4f872559a2f94996
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:322)
-at Utilities.Take_Screenshot.TakeScreenshot(Take_Screenshot.java:22)
-at TestCases.JoinInstantMeeting.Aftermethod1(JoinInstantMeeting.java:99)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod1 -->
-        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:22 BDT" name="Aftermethod2" finished-at="2024-11-12T12:43:22 BDT" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Aftermethod2 -->
-        <test-method is-config="true" signature="Aftermethod3(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:22 BDT" name="Aftermethod3" finished-at="2024-11-12T12:43:22 BDT" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="Aftermethod1(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:12 BDT" name="Aftermethod1" finished-at="2024-11-12T17:02:12 BDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=JoinWithMeetingLink status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod1 -->
+        <test-method is-config="true" signature="Aftermethod3(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:12 BDT" name="Aftermethod3" finished-at="2024-11-12T17:02:12 BDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=JoinWithMeetingLink status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Aftermethod3 -->
-        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:22 BDT" name="navigateToSignInPage" finished-at="2024-11-12T12:43:22 BDT" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:12 BDT" name="navigateToSignInPage" finished-at="2024-11-12T17:02:13 BDT" duration-ms="1052" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToSignInPage -->
-        <test-method signature="JoinWithoutIDLink()[pri:3, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:22 BDT" name="JoinWithoutIDLink" finished-at="2024-11-12T12:43:22 BDT" duration-ms="1" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=130.0.6723.117)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4319675e72bd91b4f872559a2f94996, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53511}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53511/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b4319675e72bd91b4f872559a2f94996]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=130.0.6723.117)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b4319675e72bd91b4f872559a2f94996, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53511}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53511/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b4319675e72bd91b4f872559a2f94996
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:322)
-at Utilities.Take_Screenshot.TakeScreenshot(Take_Screenshot.java:22)
-at TestCases.JoinInstantMeeting.Aftermethod1(JoinInstantMeeting.java:99)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        <test-method signature="JoinWithoutIDLink()[pri:3, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:13 BDT" name="JoinWithoutIDLink" finished-at="2024-11-12T17:02:28 BDT" duration-ms="15170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- JoinWithoutIDLink -->
-        <test-method is-config="true" signature="Aftermethod1(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:22 BDT" name="Aftermethod1" finished-at="2024-11-12T12:43:22 BDT" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="Aftermethod1(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:28 BDT" name="Aftermethod1" finished-at="2024-11-12T17:02:28 BDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=JoinWithoutIDLink status=SUCCESS method=JoinInstantMeeting.JoinWithoutIDLink()[pri:3, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Aftermethod1 -->
-        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:22 BDT" name="Aftermethod2" finished-at="2024-11-12T12:43:22 BDT" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:28 BDT" name="Aftermethod2" finished-at="2024-11-12T17:02:28 BDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=JoinWithoutIDLink status=SUCCESS method=JoinInstantMeeting.JoinWithoutIDLink()[pri:3, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Aftermethod2 -->
-        <test-method is-config="true" signature="Aftermethod3(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:22 BDT" name="Aftermethod3" finished-at="2024-11-12T12:43:22 BDT" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="Aftermethod3(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:28 BDT" name="Aftermethod3" finished-at="2024-11-12T17:02:28 BDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=JoinWithoutIDLink status=SUCCESS method=JoinInstantMeeting.JoinWithoutIDLink()[pri:3, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Aftermethod3 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T12:43:22 BDT" name="teardown" finished-at="2024-11-12T12:43:22 BDT" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:28 BDT" name="teardown" finished-at="2024-11-12T17:02:29 BDT" duration-ms="316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

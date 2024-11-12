@@ -62,7 +62,7 @@ public class prinDbOutput {
         String email = null;
         try {
             // Excel file location
-            File excelFile = new File("D:\\Convay_Automation\\AutomationTest\\TestData\\TestDataFile.xlsx");
+            File excelFile = new File("TestData\\TestDataFile.xlsx");
             FileInputStream fis = new FileInputStream(excelFile);
 
             // Load the workbook

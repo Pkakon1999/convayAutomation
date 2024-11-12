@@ -39,7 +39,7 @@ public class ProfilePicture {
 		driver.manage().window().maximize();
 
 		// Setup Excel file
-		File excelFile = new File("D:\\Convay_Automation\\AutomationTest\\TestData\\TestDataFile.xlsx");
+		File excelFile = new File("TestData\\TestDataFile.xlsx");
 		FileInputStream inputStream = new FileInputStream(excelFile);
 
 		// Load the workbook and sheet
@@ -81,7 +81,7 @@ public class ProfilePicture {
 	    Thread.sleep(2000);
 
 	    // Correct the path to the profile picture
-	    String profilePicturePath = "D:\\Convay_Automation\\AutomationTest\\TestData\\Picture_One.jpg";
+	    String profilePicturePath = "TestData\\Picture_One.jpg";
 
 	    // Upload the profile picture by sending the file path directly to the input element
 	    profilePicturePage.uploadProfilePicture(profilePicturePath);

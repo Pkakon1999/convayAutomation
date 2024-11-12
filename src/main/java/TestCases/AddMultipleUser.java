@@ -37,7 +37,7 @@ public class AddMultipleUser {
 		driver.manage().window().maximize();
 
 		// Setup Excel file
-		File excelFile = new File("D:\\Convay_Automation\\AutomationTest\\TestData\\TestDataFile.xlsx");
+		File excelFile = new File("TestData\\TestDataFile.xlsx");
 		FileInputStream inputStream = new FileInputStream(excelFile);
 
 		// Load the workbook and sheet
@@ -113,7 +113,7 @@ public class AddMultipleUser {
 		Thread.sleep(2000);
 
 		// Upload the file (replace the file path with the actual path on your system)
-		String filePath = "D:\\Convay_Automation\\AutomationTest\\TestData\\b7fadd37-0fe3-42f2-9bf8-f0793f8f8b18.csv";
+		String filePath = "TestData\\AddMultipleUser.csv";
 		addMultipleUserPage.uploadFile(filePath); // This sends the file path directly to the input field
 		Thread.sleep(4000);
 

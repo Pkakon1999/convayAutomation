@@ -34,7 +34,7 @@ public class FilterByRole {
 		driver.manage().window().maximize();
 
 		// Setup Excel file
-		File excelFile = new File("D:\\Convay_Automation\\AutomationTest\\TestData\\TestDataFile.xlsx");
+		File excelFile = new File("TestData\\TestDataFile.xlsx");
 		FileInputStream inputStream = new FileInputStream(excelFile);
 
 		// Load the workbook and sheet
