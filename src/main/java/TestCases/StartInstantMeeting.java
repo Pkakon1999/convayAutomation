@@ -96,9 +96,9 @@ public class StartInstantMeeting {
 	    String currentUrl = driver.getCurrentUrl();
 	    System.out.println("Current URL: " + currentUrl);
 
-	    // User redirection validation after clicking on Blog button
+	    // User redirection validation after clicking on cross button
 	    String expectedUrl = "https://meet2.synesisit.info/home";
-	    Assert.assertEquals(currentUrl, expectedUrl, "URL after login did not match the expected URL.");
+	    Assert.assertEquals(currentUrl, expectedUrl, "URL mismatched!");
 
 	}
 

@@ -1,144 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-12T17:01:34 BDT" name="Default suite" finished-at="2024-11-12T17:02:29 BDT" duration-ms="54157">
+  <suite started-at="2024-12-15T16:11:12 BDT" name="Default suite" finished-at="2024-12-15T16:11:29 BDT" duration-ms="17507">
     <groups>
     </groups>
-    <test started-at="2024-11-12T17:01:34 BDT" name="Default test" finished-at="2024-11-12T17:02:29 BDT" duration-ms="54157">
-      <class name="TestCases.JoinInstantMeeting">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:01:34 BDT" name="setup" finished-at="2024-11-12T17:01:38 BDT" duration-ms="3803" status="PASS">
+    <test started-at="2024-12-15T16:11:12 BDT" name="Default test" finished-at="2024-12-15T16:11:29 BDT" duration-ms="17507">
+      <class name="TestCases.InstantMeetingUX">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.InstantMeetingUX@cc43f62]" started-at="2024-12-15T16:11:12 BDT" name="setup" finished-at="2024-12-15T16:11:15 BDT" duration-ms="3095" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:01:38 BDT" name="navigateToSignInPage" finished-at="2024-11-12T17:01:42 BDT" duration-ms="4293" status="PASS">
+        <test-method is-config="true" signature="navigateToHomePage2()[pri:0, instance:TestCases.InstantMeetingUX@cc43f62]" started-at="2024-12-15T16:11:15 BDT" name="navigateToHomePage2" finished-at="2024-12-15T16:11:22 BDT" duration-ms="6567" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateToSignInPage -->
-        <test-method signature="JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:01:42 BDT" name="JoinWithMeetingID" finished-at="2024-11-12T17:02:00 BDT" duration-ms="17723" status="PASS">
+        </test-method> <!-- navigateToHomePage2 -->
+        <test-method signature="instantMeetingUX()[pri:1, instance:TestCases.InstantMeetingUX@cc43f62]" started-at="2024-12-15T16:11:22 BDT" name="instantMeetingUX" finished-at="2024-12-15T16:11:29 BDT" duration-ms="7510" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- JoinWithMeetingID -->
-        <test-method is-config="true" signature="Aftermethod1(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:00 BDT" name="Aftermethod1" finished-at="2024-11-12T17:02:00 BDT" duration-ms="3" status="PASS">
+        </test-method> <!-- instantMeetingUX -->
+        <test-method is-config="true" signature="captureFailureScreenshot1(org.testng.ITestResult)[pri:0, instance:TestCases.InstantMeetingUX@cc43f62]" started-at="2024-12-15T16:11:29 BDT" name="captureFailureScreenshot1" finished-at="2024-12-15T16:11:29 BDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=JoinWithMeetingID status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
+                <![CDATA[[TestResult name=instantMeetingUX status=SUCCESS method=InstantMeetingUX.instantMeetingUX()[pri:1, instance:TestCases.InstantMeetingUX@cc43f62] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Aftermethod1 -->
-        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:00 BDT" name="Aftermethod2" finished-at="2024-11-12T17:02:00 BDT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=JoinWithMeetingID status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod2 -->
-        <test-method is-config="true" signature="Aftermethod3(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:00 BDT" name="Aftermethod3" finished-at="2024-11-12T17:02:00 BDT" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=JoinWithMeetingID status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingID()[pri:1, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod3 -->
-        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:00 BDT" name="navigateToSignInPage" finished-at="2024-11-12T17:02:02 BDT" duration-ms="1269" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToSignInPage -->
-        <test-method signature="JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:02 BDT" name="JoinWithMeetingLink" finished-at="2024-11-12T17:02:12 BDT" duration-ms="10460" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- JoinWithMeetingLink -->
-        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:12 BDT" name="Aftermethod2" finished-at="2024-11-12T17:02:12 BDT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=JoinWithMeetingLink status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod2 -->
-        <test-method is-config="true" signature="Aftermethod1(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:12 BDT" name="Aftermethod1" finished-at="2024-11-12T17:02:12 BDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=JoinWithMeetingLink status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod1 -->
-        <test-method is-config="true" signature="Aftermethod3(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:12 BDT" name="Aftermethod3" finished-at="2024-11-12T17:02:12 BDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=JoinWithMeetingLink status=SUCCESS method=JoinInstantMeeting.JoinWithMeetingLink()[pri:2, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod3 -->
-        <test-method is-config="true" signature="navigateToSignInPage()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:12 BDT" name="navigateToSignInPage" finished-at="2024-11-12T17:02:13 BDT" duration-ms="1052" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToSignInPage -->
-        <test-method signature="JoinWithoutIDLink()[pri:3, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:13 BDT" name="JoinWithoutIDLink" finished-at="2024-11-12T17:02:28 BDT" duration-ms="15170" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- JoinWithoutIDLink -->
-        <test-method is-config="true" signature="Aftermethod1(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:28 BDT" name="Aftermethod1" finished-at="2024-11-12T17:02:28 BDT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=JoinWithoutIDLink status=SUCCESS method=JoinInstantMeeting.JoinWithoutIDLink()[pri:3, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod1 -->
-        <test-method is-config="true" signature="Aftermethod2(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:28 BDT" name="Aftermethod2" finished-at="2024-11-12T17:02:28 BDT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=JoinWithoutIDLink status=SUCCESS method=JoinInstantMeeting.JoinWithoutIDLink()[pri:3, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod2 -->
-        <test-method is-config="true" signature="Aftermethod3(org.testng.ITestResult)[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:28 BDT" name="Aftermethod3" finished-at="2024-11-12T17:02:28 BDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=JoinWithoutIDLink status=SUCCESS method=JoinInstantMeeting.JoinWithoutIDLink()[pri:3, instance:TestCases.JoinInstantMeeting@645aa696] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Aftermethod3 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.JoinInstantMeeting@645aa696]" started-at="2024-11-12T17:02:28 BDT" name="teardown" finished-at="2024-11-12T17:02:29 BDT" duration-ms="316" status="PASS">
+        </test-method> <!-- captureFailureScreenshot1 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCases.InstantMeetingUX@cc43f62]" started-at="2024-12-15T16:11:29 BDT" name="teardown" finished-at="2024-12-15T16:11:29 BDT" duration-ms="283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- TestCases.JoinInstantMeeting -->
+      </class> <!-- TestCases.InstantMeetingUX -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

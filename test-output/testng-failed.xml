@@ -3,18 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.JoinInstantMeeting">
+      <class name="TestCases.UpcomingMeetingUX">
         <methods>
-          <include name="JoinWithMeetingLink"/>
-          <include name="setup"/>
-          <include name="Aftermethod1"/>
           <include name="teardown"/>
-          <include name="JoinWithoutIDLink"/>
-          <include name="Aftermethod3"/>
-          <include name="Aftermethod2"/>
-          <include name="navigateToSignInPage"/>
+          <include name="captureFailureScreenshot3"/>
+          <include name="captureFailureScreenshot2"/>
+          <include name="UpcomingUXValiateURL"/>
+          <include name="captureFailureScreenshot1"/>
+          <include name="navigateToHomePage2"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- TestCases.JoinInstantMeeting -->
+      </class> <!-- TestCases.UpcomingMeetingUX -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

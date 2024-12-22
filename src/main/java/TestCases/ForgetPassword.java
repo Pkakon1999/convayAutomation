@@ -203,7 +203,7 @@ public class ForgetPassword {
 		Thread.sleep(2000);
 
 		// Fetch activation link by passing the email to fetchActivationLink method
-		String activationToken = printDbOutput2.fetchActivationLink(id); // Pass the email here
+		String activationToken = printDbOutput_ForgetPassword.fetchActivationLink(id); // Pass the email here
 		String activationUrl = "https://meet2.synesisit.info/activate/" + activationToken;
 		driver.get(activationUrl);
 		Thread.sleep(2000);

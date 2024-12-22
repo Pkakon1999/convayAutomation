@@ -65,7 +65,7 @@ public class SignUpTest {
 		Thread.sleep(2000);
 
 		// Fetch activation link by passing the email to fetchActivationLink method
-		String activationToken = prinDbOutput.fetchActivationLink(email); // Pass the email here
+		String activationToken = prinDbOutput_SignUp.fetchActivationLink(email); // Pass the email here
 		String activationUrl = "https://meet2.synesisit.info/activate/" + activationToken;
 		driver.get(activationUrl);
 		Thread.sleep(2000);
@@ -133,7 +133,7 @@ public class SignUpTest {
 		Thread.sleep(2000);
 
 		// Fetch activation link by passing the email to fetchActivationLink method
-		String activationToken = prinDbOutput.fetchActivationLink(email); // Pass the email here
+		String activationToken = prinDbOutput_SignUp.fetchActivationLink(email); // Pass the email here
 		String activationUrl = "https://meet2.synesisit.info/activate/" + activationToken;
 		driver.get(activationUrl);
 		Thread.sleep(2000);

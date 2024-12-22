@@ -69,7 +69,7 @@ public class LogOutTest {
 		logoutPage.clickdropDown1();
 		Thread.sleep(2000); // Wait for the logout to complete
 
-		System.out.println("Button Text: " + logoutPage.getButtonText());
+		//System.out.println("Button Text: " + logoutPage.getButtonText());
 
 		logoutPage.clickLogout();
 		// Wait for the redirection to the login page
@@ -78,12 +78,13 @@ public class LogOutTest {
 
 		// Get and print the current URL
 		String currentUrl = driver.getCurrentUrl();
-		System.out.println("Current URL: " + currentUrl);
+		//System.out.println("Current URL: " + currentUrl);
+
 
 		// User redirection validation after successful sign in
 		String expectedUrl = "https://convay.com/sign-in";
 
-		Assert.assertEquals(currentUrl, expectedUrl, "URL after logout did not match the expected URL.");
+		Assert.assertEquals(currentUrl, expectedUrl, "Logout Failed!");
 	}
 
 	@AfterMethod
@@ -100,21 +101,25 @@ public class LogOutTest {
 		logoutPage.clickdropDown2();
 		Thread.sleep(2000); // Wait for the logout to complete
 
-		System.out.println("Button Text: " + logoutPage.getButtonText());
+		// Validation the text of logout button
+		String actualButtonName = logoutPage.getButtonText();
+		String expectedButtonName = "Logout";
+
+		Assert.assertEquals(actualButtonName, expectedButtonName, "Logout button name is not as expected.");
 
 		logoutPage.clickLogout();
-		// Wait for the redirection to the login page b
+		// Wait for the redirection to the login page
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.urlToBe("https://convay.com/sign-in"));
 
 		// Get and print the current URL
 		String currentUrl = driver.getCurrentUrl();
-		System.out.println("Current URL: " + currentUrl);
+		//System.out.println("Current URL: " + currentUrl);
 
 		// User redirection validation after successful sign in
 		String expectedUrl = "https://convay.com/sign-in";
 
-		Assert.assertEquals(currentUrl, expectedUrl, "URL after logout did not match the expected URL.");
+		Assert.assertEquals(currentUrl, expectedUrl, "Logout Failed!");
 	}
 
 	@AfterMethod
@@ -132,20 +137,18 @@ public class LogOutTest {
 		logoutPage.clickdropDown3();
 		Thread.sleep(2000); // Wait for the logout to complete
 
-		System.out.println("Button Text: " + logoutPage.getButtonText());
-
 		logoutPage.clickLogout(); // Wait for the redirection to the login page
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.urlToBe("https://convay.com/sign-in"));
 
 		// Get and print the current URL
 		String currentUrl = driver.getCurrentUrl();
-		System.out.println("Current URL: " + currentUrl);
+		//System.out.println("Current URL: " + currentUrl);
 
 		// User redirection validation after successful sign in
 		String expectedUrl = "https://convay.com/sign-in";
 
-		Assert.assertEquals(currentUrl, expectedUrl, "URL after logout did not match the expected URL.");
+		Assert.assertEquals(currentUrl, expectedUrl, "URL Mismatched!");
 	}
 
 	@AfterMethod

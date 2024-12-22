@@ -65,7 +65,7 @@ public class HostSetting {
 	}
 
 	@Test(priority = 1) // Test case to access host control settings
-	void FilterByStatus_Active() throws InterruptedException {
+	void Host_Setting() throws InterruptedException {
 		// Navigate to the Manage User page after login
 		HostSetting_Page hostSeeting = new HostSetting_Page(driver);
 
