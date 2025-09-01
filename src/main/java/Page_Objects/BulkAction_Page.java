@@ -16,10 +16,15 @@ public class BulkAction_Page {
 	// Define locators
 	By adminDropdown = By.xpath("//span[@class='submenu-arrow']");
 	By btn_ManageUsers = By.xpath("//span[normalize-space()='Manage Users']");
-	By row1_loc = By.xpath("//div[@id='row-3081a4c1-2646-44b8-ae45-338c0638dce7']//div[@class='sc-fqkvVR sc-gsFSXq ouAgA bMGeNQ rdt_TableCell']");
-	By row2_loc = By.xpath("//div[@id='row-34806eb9-1bab-4ed9-a378-ab63b4979f2f']//div[@class='sc-fqkvVR sc-gsFSXq ouAgA bMGeNQ rdt_TableCell']");
-	By check_active1 = By.xpath("//input[@name='select-row-3081a4c1-2646-44b8-ae45-338c0638dce7']");
-	By check_active2 = By.xpath("//input[@name='select-row-34806eb9-1bab-4ed9-a378-ab63b4979f2f']");
+	By btn_Status = By.xpath("//div[@class='UnitType_userOptionPanel__3JDe3']//div[2]//div[1]//*[name()='svg']");
+	By select_Active = By.xpath("//label[normalize-space()='Active']");
+	By select_Suspened = By.xpath("//label[normalize-space()='Suspened']");
+	By select_Invited = By.xpath("//label[normalize-space()='Invited']");
+	
+	By row1_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]");
+	By row2_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]");
+	By check_active1 = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]");
+	By check_active2 = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/input[1]");
 	By btn_close_loc = By.xpath("//li[@class='multi-action-close']//*[name()='svg']");
 	By btn_bulkSuspend_loc = By.xpath("//li[normalize-space()='Suspend Users']");
 	By btn_bulkSuspendNo_loc = By.xpath("//button[normalize-space()='No']");
@@ -27,10 +32,10 @@ public class BulkAction_Page {
 	By btn_bulkActive_loc = By.xpath("//li[normalize-space()='Active Users']");
 	By btn_bulkActiveYes_loc = By.xpath("//button[normalize-space()='Yes']");
 	
-	By row1_ResendUser1_loc = By.xpath("//div[@id='row-3647cb08-d773-4ef4-ae88-4cab2577614a']//div[@class='sc-fqkvVR sc-gsFSXq ouAgA bMGeNQ rdt_TableCell']");
-	By row2_ResendUser2_loc = By.xpath("//div[@id='row-542cc2b5-826c-423d-95b6-1465cf85cea8']//div[@class='sc-fqkvVR sc-gsFSXq ouAgA bMGeNQ rdt_TableCell']");
-	By check_resend1_loc = By.xpath("//input[@name='select-row-3647cb08-d773-4ef4-ae88-4cab2577614a']");
-	By check_resend2_loc = By.xpath("//input[@name='select-row-542cc2b5-826c-423d-95b6-1465cf85cea8']");
+	By row1_ResendUser1_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]");
+	By row2_ResendUser2_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]");
+	By check_resend1_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]");
+	By check_resend2_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/input[1]");
 	By btn_bulkResend_loc = By.xpath("//li[normalize-space()='Resend Invitations']");
 	By btn_bulkResendYes_loc = By.xpath("//button[normalize-space()='Yes']");
 	
@@ -51,6 +56,26 @@ public class BulkAction_Page {
 	// Method to click Manage Users
 	public void clickManageUsers() {
 		driver.findElement(btn_ManageUsers).click();
+	}
+
+	// Method to click on Status
+	public void clickStatus() {
+		driver.findElement(btn_Status).click();
+	}
+
+	// Method to Select Active status
+	public void selectActive() {
+		driver.findElement(select_Active).click();
+	}
+
+	// Method to Select Suspened status
+	public void selectSuspened() {
+		driver.findElement(select_Suspened).click();
+	}
+
+	// Method to Select Invited status
+	public void selectInvited() {
+		driver.findElement(select_Invited).click();
 	}
 
 	// Method to hover over the row and make the checkbox visible

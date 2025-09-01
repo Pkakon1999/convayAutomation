@@ -82,7 +82,7 @@ public class OrganizationLogo {
 		Thread.sleep(2000);
 
 		// Correct the path to the logo
-		String logo = "TestData\\convay1.png";
+		String logo = new File("TestData\\convay1.png").getAbsolutePath();
 
 		// Upload the logo by sending the file path directly to the input element
 		organizationLogo.uploadProfilePicture(logo);

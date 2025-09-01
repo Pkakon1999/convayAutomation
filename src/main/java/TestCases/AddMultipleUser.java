@@ -112,8 +112,8 @@ public class AddMultipleUser {
 		addMultipleUserPage.clickUpload();
 		Thread.sleep(2000);
 
-		// Upload the file (replace the file path with the actual path on your system)
-		String filePath = "TestData\\AddMultipleUser.csv";
+		// Upload the file
+		String filePath = "C:\\Users\\USER\\Downloads\\b7fadd37-0fe3-42f2-9bf8-f0793f8f8b18.csv";
 		addMultipleUserPage.uploadFile(filePath); // This sends the file path directly to the input field
 		Thread.sleep(4000);
 
@@ -126,11 +126,11 @@ public class AddMultipleUser {
 		js.executeScript("window.scrollBy(0,500);");
 		Thread.sleep(1000);
 
-		// Click on Send Invitation button addMultipleUserPage.clickSendInvitation();
+		// Click on Send Invitation button
+		addMultipleUserPage.clickSendInvitation();
 		Thread.sleep(4000);
 
-		// Verify if user is successfully added by checking redirection or a success
-		// message
+		// Verify if user is successfully added by checking redirection or a success message
 		String currentUrl = driver.getCurrentUrl();
 		String expectedUrl = "https://meet2.synesisit.info/add-user"; // Expected URL after adding a user
 
@@ -166,7 +166,7 @@ public class AddMultipleUser {
 		addMultipleUserPage.clickUpload();
 		Thread.sleep(2000);
 
-		// Upload the file (replace the file path with the actual path on your system)
+		// Upload the file
 		String filePath = "C:\\Users\\USER\\Downloads\\b7fadd37-0fe3-42f2-9bf8-f0793f8f8b18 (11).csv";
 		addMultipleUserPage.uploadFile(filePath); // This sends the file path directly to the input field
 		Thread.sleep(4000);
@@ -186,7 +186,7 @@ public class AddMultipleUser {
 		}
 	}
 
-	@Test(priority = 4) // To check download Template button is working perfectly or not
+	@Test(priority = 4) // To check upload Template functionality is working perfectly or not
 	void SuccessMessage() throws InterruptedException {
 		// Navigate to the Add User page after login
 		AddMultipleUser_Page addMultipleUserPage = new AddMultipleUser_Page(driver);
@@ -207,7 +207,7 @@ public class AddMultipleUser {
 		addMultipleUserPage.clickUpload();
 		Thread.sleep(2000);
 
-		// Upload the file (replace the file path with the actual path on your system)
+		// Upload the file
 		String filePath = "C:\\Users\\USER\\Downloads\\b7fadd37-0fe3-42f2-9bf8-f0793f8f8b18.csv";
 		addMultipleUserPage.uploadFile(filePath); // This sends the file path directly to the input field
 		Thread.sleep(4000);

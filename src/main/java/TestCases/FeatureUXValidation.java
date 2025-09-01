@@ -62,7 +62,7 @@ public class FeatureUXValidation {
 		// User redirection validation after click on Feature button
 		String expectedUrl = "https://convay.com/features";
 
-		Assert.assertEquals(currentUrl, expectedUrl, "URL after login did not match the expected URL.");
+		Assert.assertEquals(currentUrl, expectedUrl, "URL did not match the expected URL.");
 	}
 
 	@AfterMethod

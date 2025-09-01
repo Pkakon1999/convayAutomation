@@ -15,7 +15,7 @@ public class MeetingManagementUpcoming_Page {
 
 	// Define locators
 	By meetingManagement_loc = By.xpath("//span[normalize-space()='Meeting Management']");
-	By btn_upcomingMeeting = By.xpath("//a[@id='upcoming-meeting']");
+	By btn_upcomingMeeting = By.xpath("//a[normalize-space()='Upcoming Meetings']");
 
 	// Constructor
 	public MeetingManagementUpcoming_Page(WebDriver driver) {

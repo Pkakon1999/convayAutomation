@@ -15,10 +15,10 @@ public class MeetingManagementUX_Page {
 
 	// Define locators
 	By meetingManagement_loc = By.xpath("//span[normalize-space()='Meeting Management']");
-	By selectUpcomingMeeting_loc = By.xpath("//a[@id='upcoming-meeting']");
-	By selectPreviousMeeting_loc = By.xpath("//a[@id='previous-meeting']");
-	By upcomingButton_loc = By.xpath("//a[@id='upcoming-meeting']");
-	By previousButton_loc = By.xpath("//a[@id='previous-meeting']");
+	By selectUpcomingMeeting_loc = By.xpath("//a[normalize-space()='Upcoming Meetings']");
+	By selectPreviousMeeting_loc = By.xpath("//a[normalize-space()='Previous Meeting']");
+	By upcomingButton_loc = By.xpath("//a[normalize-space()='Upcoming Meetings']");
+	By previousButton_loc = By.xpath("//a[normalize-space()='Previous Meeting']");
 
 	// Constructor
 	public MeetingManagementUX_Page(WebDriver driver) {

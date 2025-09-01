@@ -21,7 +21,7 @@ import Page_Objects.SignUp_Page;
 import Page_Objects.Complete_SignUp_Page;
 import Utilities.Take_Screenshot;
 
-public class SignUpTest {
+public class SignUp {
 
 	WebDriver driver;
 	XSSFWorkbook ExcelWBook;
@@ -65,7 +65,7 @@ public class SignUpTest {
 		Thread.sleep(2000);
 
 		// Fetch activation link by passing the email to fetchActivationLink method
-		String activationToken = prinDbOutput_SignUp.fetchActivationLink(email); // Pass the email here
+		String activationToken = printDbOutput_SignUp.fetchActivationLink(email); // Pass the email here
 		String activationUrl = "https://meet2.synesisit.info/activate/" + activationToken;
 		driver.get(activationUrl);
 		Thread.sleep(2000);
@@ -133,7 +133,7 @@ public class SignUpTest {
 		Thread.sleep(2000);
 
 		// Fetch activation link by passing the email to fetchActivationLink method
-		String activationToken = prinDbOutput_SignUp.fetchActivationLink(email); // Pass the email here
+		String activationToken = printDbOutput_SignUp.fetchActivationLink(email); // Pass the email here
 		String activationUrl = "https://meet2.synesisit.info/activate/" + activationToken;
 		driver.get(activationUrl);
 		Thread.sleep(2000);

@@ -12,7 +12,7 @@ public class UpcomingMeetingStart_Page {
 
 	// Define locators
 	By startUpcomingMeeting_loc = By.xpath("//div[@class='cnv-jon-btn-small UpcomingMeetingCard_textAlign__3eQQQ']");
-	By btn_Start = By.xpath("//button[@id='startButton']");
+	By btn_Start = By.xpath("//div[@class='cnv-content-area']");
 	By btn_cross_loc = By.xpath("//div[@class='cnv-start-up-modal-left']");
 	
 	

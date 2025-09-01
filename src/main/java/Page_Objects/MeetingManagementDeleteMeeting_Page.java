@@ -17,12 +17,11 @@ public class MeetingManagementDeleteMeeting_Page {
 	By startTime_loc = By.xpath("//div[@class='cnv-form-group-col-2-select']//div[1]//div[1]//div[1]//div[1]//*[name()='svg']");
 	By selectStartTime_loc = By.xpath("//div[@class='cnv-col-xl-1 cnv-col-lg-1 cnv-col-md-1 cnv-mt-1 ScheduleCreateTimezone_marginAlignment__2XguW']");
 	By save_loc = By.xpath("//button[@id='save-schedule']");
-	By cancel_loc = By.xpath("//button[@class='cnv-btn cnv-btn-cancel-new cnv-mr-3']");
 	By ok_loc = By.xpath("//button[normalize-space()='Ok']");
 	By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");
 	By meetingManagement_loc = By.xpath("//span[normalize-space()='Meeting Management']");
 	By selectMeeting_loc = By.xpath("//div[@class='cnv-flex-one']");
-	By deleteMeeting_loc = By.xpath("//div[4]//*[name()='svg']//*[name()='g' and contains(@data-name,'Group 1106')]//*[name()='rect' and contains(@data-name,'Rectangle ')]");
+	By deleteMeeting_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/*[name()='svg'][1]/*[name()='g'][1]/*[name()='rect'][1]");
 	By deleteCancel_loc = By.xpath("//button[normalize-space()='Cancel']");
 	By deleteConfirm_loc = By.xpath("//button[normalize-space()='Delete']");
 	
@@ -40,7 +39,7 @@ public class MeetingManagementDeleteMeeting_Page {
 
 	public WebElement getCardContainer() {
 		// Locate the scrollable container element within the card
-		return driver.findElement(By.xpath("//body/div[@id='root']/div[@class='cnv-wrapper cnv-theme-light']/div[@class='cnv-content-area']/div[@class='cnv-content']/div[@id='portalForModal']/div[@class='cnv-container-fluid Scheduler_main__F23x0']/div[@class='Scheduler_scheduleCreate__2kizM']/div[@class='cnv-container']/div[@class='cnv-card schedule-create-custom']/div[@class='cnv-card-body']/div[@id='taber1']/div[@id='event-details']/div/div[1]"));
+		return driver.findElement(By.xpath("//div[@class='cnv-left-sidebar']//li[3]//a[1]"));
 	}
 
 	// Method to click on start time to schedule a meeting
@@ -61,11 +60,6 @@ public class MeetingManagementDeleteMeeting_Page {
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
-	// Method to click on cancel button
-	public void selectCancel() {
-		driver.findElement(cancel_loc).click();
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	}
 
 	// Method to click on OK button
 	public void selectOK() {

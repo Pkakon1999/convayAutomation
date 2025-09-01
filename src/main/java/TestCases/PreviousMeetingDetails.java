@@ -138,8 +138,7 @@ public class PreviousMeetingDetails {
 
 		// Assert the previous meeting ID
 		String afterGetURL = previous.getURL();
-		Assert.assertEquals(afterGetURL, initialValue,
-				"Meeting URL- https://meet2.synesisit.info/m/j/647712840966/kakonpaulavi");
+		Assert.assertEquals(afterGetURL, initialValue,"Meeting URL- https://meet2.synesisit.info/m/j/647712840966/kakonpaulavi");
 	}
 
 	@AfterMethod

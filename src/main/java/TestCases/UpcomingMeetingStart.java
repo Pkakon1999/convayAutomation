@@ -76,7 +76,7 @@ public class UpcomingMeetingStart {
 		lp.setUserName(username);
 		lp.setPassword(password);
 		lp.clickLogin();
-		Thread.sleep(4000); // Wait for login to complete
+		Thread.sleep(30000); // Wait for login to complete
 	}
 
 	@Test(priority = 1) // Test case to cancel an upcoming meeting
@@ -84,6 +84,7 @@ public class UpcomingMeetingStart {
 		// Navigate to the Start meeting option after login
 		UpcomingMeetingStart_Page upcomingStart = new UpcomingMeetingStart_Page(driver);
 
+		Thread.sleep(10000);
 		// Click on start an upcoming meeting
 		upcomingStart.clickStartUpcoming();
 		Thread.sleep(2000);

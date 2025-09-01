@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
 import java.time.Duration;
 
 public class DeleteUser_Page {
@@ -15,10 +17,11 @@ public class DeleteUser_Page {
 	// Define locators
 	By adminDropdown = By.xpath("//span[@class='submenu-arrow']");
 	By btn_ManageUsers = By.xpath("//span[normalize-space()='Manage Users']");
-	By btn_threeDot = By.xpath("//div[@id='cell-6-ad679abe-45fe-49dc-991b-34ea4ed981f3']//div[@data-tag='allowRowEvents']//span//span[@class='cnv-ml-1 UserManagement_threeDotBtn__PsohE'][normalize-space()='...']");
+	By btn_threeDot = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[7]/div[1]/span[1]/span[1]");
 	By btn_deleteUser_loc = By.xpath("//a[normalize-space()='Delete']");
 	By btn_confirmDeletion_loc = By.xpath("//button[normalize-space()='Confirm Deletion']");
 	By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");
+	By errorMessage_loc = By.xpath("//span[@class='errorNoteBoth']");
 	
 
 	// Constructor
@@ -51,6 +54,12 @@ public class DeleteUser_Page {
 	// Method to select confirm deletion
 	public void selectConfirmDeletion() {
 		driver.findElement(btn_confirmDeletion_loc).click();
+	}
+
+	// Method to validate error message text
+	public String getMessageText(String expectedText) {
+		WebElement messageElement = driver.findElement(errorMessage_loc);
+		return messageElement.getText();
 	}
 
 	public String getToasterValue() {

@@ -80,10 +80,13 @@ public class ValidateCopyMeetingInvitation {
 		String getToasterValue = invitation.getToasterValue();
 
 		// Verify the toaster message text
-		Assert.assertEquals(getToasterValue,
-				"Invitation copied to clipboard\n" + "Kakon Paul Avi is inviting you to a meeting on Convay.\n"
-						+ "Time: Dec 12, 2024, 12:00 PM Asia, Dhaka\n" + "Meeting ID:\n" + "6477 1284 0966\n"
-						+ "Meeting Link: https://meet2.synesisit.info/m/j/647712840966/kakonpaulavi");
+		Assert.assertEquals(getToasterValue, "Invitation copied to clipboard\n"
+				+ "Kakon Paul Avi is inviting you to a meeting on Convay.\n"
+				+ "Time: Jul 23, 2025, 05:15 PM Asia, Dhaka\n" 
+				+ "Topic: Kakon Paul Avi's scheduled meeting\n"
+				+ "Meeting ID :\n"
+				+ "6477 1284 0966\n"
+				+ "Meeting Link: https://meet2.synesisit.info/m/j/647712840966/kakonpaulavi");
 
 	}
 

@@ -45,7 +45,7 @@ public class JoinMeetingFromLandingPage {
 
 		// Load the workbook and sheet
 		ExcelWBook = new XSSFWorkbook(inputStream);
-		ExcelWSheet = ExcelWBook.getSheetAt(17);
+		ExcelWSheet = ExcelWBook.getSheet("JoinFromLanding");
 	}
 
 	@BeforeMethod

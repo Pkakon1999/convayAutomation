@@ -17,8 +17,8 @@ public class SuspendUser_Page {
 	By btn_ManageUsers = By.xpath("//span[normalize-space()='Manage Users']");
 	By StatusDropdown_loc = By.xpath("//div[@class='UnitType_userOptionPanel__3JDe3']//div[2]//div[1]//*[name()='svg']");
 	By SelectActive_loc = By.xpath("//label[normalize-space()='Active']");
-	By SelectSuspended_loc = By.xpath("//label[normalize-space()='Suspended']");
-	By btn_threeDot = By.xpath("//div[@id='cell-6-565c6424-db64-49dc-9e8e-5dc1edc2d7cc']//div[@data-tag='allowRowEvents']//span//span[@class='cnv-ml-1 UserManagement_threeDotBtn__PsohE'][normalize-space()='...']");
+	By SelectSuspended_loc = By.xpath("//label[normalize-space()='Suspened']");
+	By btn_threeDot = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[9]/div[7]/div[1]/span[1]/span[1]");
 	By btn_SuspendUser_loc = By.xpath("//span[@class='cnv-active']");
 	By text_Reason_loc = By.xpath("//textarea[@placeholder='Explain the reason for the suspension of this user (Optional)']");
 	By btn_confirmSuspension_loc = By.xpath("//button[normalize-space()='Confirm Suspension']");

@@ -37,7 +37,7 @@ public class OrganizationInfo {
 		driver.manage().window().maximize();
 
 		// Setup Excel file
-		File excelFile = new File("TestDataFile.xlsx");
+		File excelFile = new File("TestData\\TestDataFile.xlsx");
 		FileInputStream inputStream = new FileInputStream(excelFile);
 
 		// Load the workbook and sheet
@@ -107,7 +107,7 @@ public class OrganizationInfo {
 		Thread.sleep(2000);
 
 		// Load the new sheet for user data
-		ExcelWSheet = ExcelWBook.getSheetAt(9);
+		ExcelWSheet = ExcelWBook.getSheet("Organization_Info");
 
 		// Reading new user data from the Excel sheet
 		String firstName = ExcelWSheet.getRow(0).getCell(0).toString();

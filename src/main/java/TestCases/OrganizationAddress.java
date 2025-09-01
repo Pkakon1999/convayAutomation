@@ -117,7 +117,7 @@ public class OrganizationAddress {
 	    Thread.sleep(1000);
 
 	    // Load the new sheet for user data
-	    ExcelWSheet = ExcelWBook.getSheetAt(10);
+	    ExcelWSheet = ExcelWBook.getSheet("Organization_Address");
 
 	    // Reading new user data from the Excel sheet
 	    String location = ExcelWSheet.getRow(0).getCell(0).toString();

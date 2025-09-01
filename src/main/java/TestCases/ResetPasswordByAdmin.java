@@ -27,6 +27,7 @@ public class ResetPasswordByAdmin {
 	XSSFWorkbook ExcelWBook;
 	XSSFSheet ExcelWSheet;
 	XSSFSheet AddSingleUserSheet;
+	private ResetPasswordByAdmin_Page resetPasswordPage;
 
 	@BeforeClass
 	void setup() throws IOException {
@@ -65,34 +66,22 @@ public class ResetPasswordByAdmin {
 
 	@Test(priority = 1) // Test case to reset PASSWORD
 	void ResetPassword1() throws InterruptedException {
-		// Navigate to the Manage User page after login
 		ResetPasswordByAdmin_Page resetPasswordPage = new ResetPasswordByAdmin_Page(driver);
 
-		// Open the Admin dropdown
 		resetPasswordPage.clickAdminDropdown();
 		Thread.sleep(2000);
 
-		// Click on "Manage Users"
 		resetPasswordPage.clickManageUsers();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
-		// Use JavaScriptExecutor to scroll down by 500 pixels
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,800);");
-		Thread.sleep(1000);
-
-		// Click on 3 dot for which user you want to delete
 		resetPasswordPage.select3dot();
 		Thread.sleep(2000);
-
-		// Click on delete
 		resetPasswordPage.selectResetPassword();
 		Thread.sleep(2000);
 
-		// Load the new sheet for user data
-		ExcelWSheet = ExcelWBook.getSheetAt(15);
+		// ✅ FIX: Assign to ExcelWSheet (so the lines below won’t throw NullPointerException)
+		ExcelWSheet = ExcelWBook.getSheet("ResetPassByAdmin");
 
-		// Reading new user data from the Excel sheet
 		String newPass = ExcelWSheet.getRow(0).getCell(0).toString();
 		String confirmPass = ExcelWSheet.getRow(0).getCell(1).toString();
 
@@ -102,13 +91,10 @@ public class ResetPasswordByAdmin {
 		resetPasswordPage.setConfirmPassword(confirmPass);
 		Thread.sleep(1000);
 
-		// Click on Confirm Update
 		resetPasswordPage.clickUpdate();
 		Thread.sleep(2000);
 
 		String getToasterValue = resetPasswordPage.getToasterValue();
-
-		// Verify the toaster message text
 		Assert.assertEquals(getToasterValue, "User password updated successfully");
 	}
 
@@ -121,11 +107,12 @@ public class ResetPasswordByAdmin {
 
 	@Test(priority = 2) // Test case to check the user can login with the old password
 	void ResetPassword2() throws InterruptedException {
+		ResetPasswordByAdmin_Page resetPasswordPage = new ResetPasswordByAdmin_Page(driver);
 
 		// Login before add users
 		driver.get("https://meet2.synesisit.info/sign-in");
 
-		AddSingleUserSheet = ExcelWBook.getSheetAt(15);
+		AddSingleUserSheet = ExcelWBook.getSheet("ResetPassByAdmin");
 
 		// Reading the first row's first and second cells for username and password
 		String username = AddSingleUserSheet.getRow(1).getCell(0).toString();
@@ -139,14 +126,10 @@ public class ResetPasswordByAdmin {
 		lp.clickLogin();
 		Thread.sleep(4000); // Wait for login to complete
 
-		// Get and print the current URL
-		String currentUrl = driver.getCurrentUrl();
-		System.out.println("Current URL: " + currentUrl);
+		String checkErrorMessage = resetPasswordPage.getErrorMsg();
 
-		// To check page validation
-		String expectedUrl = "https://meet2.synesisit.info/sign-in";
-
-		Assert.assertEquals(currentUrl, expectedUrl, "User is still able to login with old password.");
+		// Verify the error message text
+		Assert.assertEquals(checkErrorMessage, "Enter a valid email address and password");
 	}
 
 	@AfterMethod
@@ -162,7 +145,7 @@ public class ResetPasswordByAdmin {
 		// Login before add users
 		driver.get("https://meet2.synesisit.info/sign-in");
 
-		AddSingleUserSheet = ExcelWBook.getSheetAt(15);
+		AddSingleUserSheet = ExcelWBook.getSheet("ResetPassByAdmin");
 
 		// Reading the first row's first and second cells for username and password
 		String username = AddSingleUserSheet.getRow(2).getCell(0).toString();

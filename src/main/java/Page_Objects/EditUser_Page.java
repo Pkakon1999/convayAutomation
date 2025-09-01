@@ -15,7 +15,7 @@ public class EditUser_Page {
 	// Define locators
 	By adminDropdown = By.xpath("//span[@class='submenu-arrow']");
 	By btn_ManageUsers = By.xpath("//span[normalize-space()='Manage Users']");
-	By btn_threeDot = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[7]/div[1]/span[1]/span[1]");
+	By btn_threeDot = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[7]/div[1]/span[1]/span[1]");
 	By btn_editUser_loc = By.xpath("//a[normalize-space()='Edit User']");
 	By txt_FirstName_loc = By.name("firstName");
 	By txt_LastName_loc = By.name("lastName");
@@ -23,7 +23,7 @@ public class EditUser_Page {
 	By roleDropdown1 = By.xpath("//div[@class='cnv-select-with-label']//*[name()='svg']");
 	By roleDropdown2 = By.xpath("//li[normalize-space()='Admin']");
 	By roleDropdown3 = By.xpath("//li[normalize-space()='Owner']");
-	By btn_update_loc = By.xpath("//input[@value='Update']");
+	By btn_update_loc = By.xpath("//button[@type='submit']");
 	By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");
 
 	// Constructor

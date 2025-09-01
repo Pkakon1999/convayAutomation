@@ -46,7 +46,7 @@ public class MeetingManagementUpcoming {
 	}
 
 	@BeforeMethod
-	void navigateToHomePage2() throws InterruptedException {
+	void UpcomingUX2() throws InterruptedException {
 		// Login before add users
 		driver.get("https://meet2.synesisit.info/sign-in");
 

@@ -70,21 +70,25 @@ public class AccessTranscription {
 
 		// Click on meeting management
 		accessTranscription.clickMeetingManagement();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 
 		// Click on previous meeting
 		accessTranscription.clickPreviousMeeting();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 
 		// Select a meeting to access transcription
 		accessTranscription.selectMeeting();
 		Thread.sleep(2000);
 
+		// Click on dropdown
+		accessTranscription.clickDropdown();
+		Thread.sleep(2000);
+
 		// Click on Transcription tab
 		accessTranscription.clickTranscription();
 		Thread.sleep(2000);
-
-		// To validate start button text
+		
+		//To validate start button text
 		String expectedText = "Generate Meeting Minutes";
 		accessTranscription.validateButtonText(expectedText);
 		Thread.sleep(2000);

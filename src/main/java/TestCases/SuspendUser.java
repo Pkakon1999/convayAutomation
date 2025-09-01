@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.Duration;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -73,16 +74,19 @@ public class SuspendUser {
 
 		// Click on "Manage Users"
 		suspendUserPage.clickManageUsers();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 		// Click on "Role Dropdown"
-		Thread.sleep(2000);
 		suspendUserPage.roleDropdown();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 		// Select Active from dropdown
 		suspendUserPage.selectActive();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,800);");
+		Thread.sleep(4000);
 
 		// Click on 3 dot for which user you want to suspend
 		suspendUserPage.select3dot();
@@ -92,7 +96,7 @@ public class SuspendUser {
 		suspendUserPage.selectSuspend();
 		Thread.sleep(2000);
 
-		ExcelWSheet = ExcelWBook.getSheetAt(13);
+		ExcelWSheet = ExcelWBook.getSheet("Suspension_Reason");
 
 		// Reading new user data from the Excel sheet to set the reason
 		String reason = ExcelWSheet.getRow(0).getCell(0).toString();
@@ -154,18 +158,18 @@ public class SuspendUser {
 		// Login before add users
 		driver.get("https://meet2.synesisit.info/sign-in");
 
-		AddSingleUserSheet = ExcelWBook.getSheetAt(13);
+		ExcelWSheet = ExcelWBook.getSheet("Suspension_Reason");;
 
 		// Reading the first row's first and second cells for username and password
-		String username = AddSingleUserSheet.getRow(1).getCell(0).toString();
-		String password = AddSingleUserSheet.getRow(1).getCell(1).toString();
+		String username = ExcelWSheet.getRow(1).getCell(0).toString();
+		String password = ExcelWSheet.getRow(1).getCell(1).toString();
 
 		// Perform Login (using your Login_Page)
-		Login_Page lp = new Login_Page(driver);
-		lp.setUserName(username);
-		lp.setPassword(password);
+		Login_Page sp = new Login_Page(driver);
+		sp.setUserName(username);
+		sp.setPassword(password);
 		Thread.sleep(2000);
-		lp.clickLogin();
+		sp.clickLogin();
 		Thread.sleep(4000); // Wait for login to complete
 
 		// Get and print the current URL

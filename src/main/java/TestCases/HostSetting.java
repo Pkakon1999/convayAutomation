@@ -8,6 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -61,21 +62,30 @@ public class HostSetting {
 		lp.setUserName(username);
 		lp.setPassword(password);
 		lp.clickLogin();
-		Thread.sleep(4000); // Wait for login to complete
+		Thread.sleep(20000); // Wait for login to complete
 	}
 
 	@Test(priority = 1) // Test case to access host control settings
 	void Host_Setting() throws InterruptedException {
-		// Navigate to the Manage User page after login
+		// Navigate to the host control after login
 		HostSetting_Page hostSeeting = new HostSetting_Page(driver);
 
-		// Click on Copy Invitation
+		// Click on host control
 		hostSeeting.clickSetting();
 		Thread.sleep(3000);
 		
-		// Use JavaScriptExecutor to scroll down by 3000 pixels
+		 // Get the scrollable card container
 	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollBy(0,3000);");
+	    WebElement cardContainer = hostSeeting.getCardContainer();
+
+	    // Scroll down the card container incrementally
+	    int scrollAmount = 100; // Adjust this value for smaller steps
+	    int scrollDuration = 200; // Delay in milliseconds between scroll steps
+
+	    for (int i = 0; i < 30; i++) { // Adjust the number of iterations as needed
+	        js.executeScript("arguments[0].scrollBy(0, arguments[1]);", cardContainer, scrollAmount);
+	        Thread.sleep(scrollDuration);
+	    }
 
 		// Click on Save button
 		hostSeeting.clickSave();

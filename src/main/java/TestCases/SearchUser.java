@@ -74,7 +74,7 @@ public class SearchUser {
 		Thread.sleep(2000);
 
 		// Load the new sheet for user data
-		AddSingleUserSheet = ExcelWBook.getSheetAt(12);
+		AddSingleUserSheet = ExcelWBook.getSheet("Search_User");
 
 		// Reading user data from the Excel sheet
 		String search = AddSingleUserSheet.getRow(0).getCell(0).toString();
@@ -107,7 +107,7 @@ public class SearchUser {
 		Thread.sleep(2000);
 
 		// Load the new sheet for user data
-		AddSingleUserSheet = ExcelWBook.getSheetAt(12);
+		AddSingleUserSheet = ExcelWBook.getSheet("Search_User");
 
 		// Reading user data from the Excel sheet
 		String search = AddSingleUserSheet.getRow(0).getCell(1).toString();
@@ -140,7 +140,7 @@ public class SearchUser {
 		Thread.sleep(2000);
 
 		// Load the new sheet for user data
-		AddSingleUserSheet = ExcelWBook.getSheetAt(12);
+		AddSingleUserSheet = ExcelWBook.getSheet("Search_User");
 
 		// Reading user data from the Excel sheet
 		String search = AddSingleUserSheet.getRow(0).getCell(2).toString();
@@ -173,7 +173,7 @@ public class SearchUser {
 		Thread.sleep(2000);
 
 		// Load the new sheet for user data
-		AddSingleUserSheet = ExcelWBook.getSheetAt(12);
+		AddSingleUserSheet = ExcelWBook.getSheet("Search_User");
 
 		// Reading user data from the Excel sheet
 		String search = AddSingleUserSheet.getRow(0).getCell(3).toString();
@@ -206,7 +206,7 @@ public class SearchUser {
 		Thread.sleep(2000);
 
 		// Load the new sheet for user data
-		AddSingleUserSheet = ExcelWBook.getSheetAt(12);
+		AddSingleUserSheet = ExcelWBook.getSheet("Search_User");
 
 		// Reading user data from the Excel sheet
 		String search = AddSingleUserSheet.getRow(0).getCell(4).toString();

@@ -14,11 +14,11 @@ public class AccessRecordedFile_Page {
 
 	// Define locators
 	By meetingManagement_loc = By.xpath("//span[normalize-space()='Meeting Management']");
-	By selectPreviousMeeting_loc = By.xpath("//a[@id='previous-meeting']");
-	By selectMeeting_loc = By.xpath("//div[@class='cnv-flex-one']");
-	By recordings_loc = By.xpath("//a[@id='record']");
+	By selectPreviousMeeting_loc = By.xpath("//a[normalize-space()='Previous Meeting']");
+	By selectMeeting_loc = By.xpath("//div[@class='cnv-meeting-right-area cnv-ml-3']//div//div[@class='cnv-tab-container']");
+	By recordings_loc = By.xpath("//a[normalize-space()='Recordings']");
 	By copy_loc = By.xpath("//div[@class='Recording_recordLowerAction__20n1E']//div[1]");
-	By download_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]");
+	By download_loc = By.xpath("//div[@class='Recording_recordLowerAction__20n1E']//div[2]");
 	By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");
 	
 	// Constructor

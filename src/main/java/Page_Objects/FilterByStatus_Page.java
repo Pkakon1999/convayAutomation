@@ -18,7 +18,7 @@ public class FilterByStatus_Page {
 	By StatusDropdown_loc = By.xpath("//div[@class='UnitType_userOptionPanel__3JDe3']//div[2]//div[1]//*[name()='svg']");
 	By SelectActive_loc = By.xpath("//label[normalize-space()='Active']");
 	By SelectInvited_loc = By.xpath("//label[normalize-space()='Invited']");
-	By SelectSuspended_loc = By.xpath("//label[normalize-space()='Suspended']");
+	By SelectSuspended_loc = By.xpath("//label[normalize-space()='Suspened']");
 
 	// Constructor
 	public FilterByStatus_Page(WebDriver driver) {

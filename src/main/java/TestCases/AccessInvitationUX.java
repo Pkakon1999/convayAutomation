@@ -72,6 +72,7 @@ public class AccessInvitationUX {
 	void AccessInvitation() throws InterruptedException {
 		// Navigate to the invitation card after login
 		AccessInvitationUX_Page accessUX = new AccessInvitationUX_Page(driver);
+		Thread.sleep(2000);
 
 		// To validate meeting title
 		String expectedTitle = "Mosharof Hossain sent a meeting invitation to you";

@@ -76,7 +76,7 @@ public class StartInstantMeeting {
 		lp.setUserName(username);
 		lp.setPassword(password);
 		lp.clickLogin();
-		Thread.sleep(4000); // Wait for login to complete
+		Thread.sleep(40000); // Wait for login to complete
 	}
 
 	@Test(priority = 1) // Test case to start an instant meeting
@@ -90,7 +90,7 @@ public class StartInstantMeeting {
 
 		// Click on "Cross" button
 		instant.clickCross();
-		Thread.sleep(10000);
+		Thread.sleep(4000);
 		
 		// Get and print the current URL of the new tab
 	    String currentUrl = driver.getCurrentUrl();

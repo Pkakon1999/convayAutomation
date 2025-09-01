@@ -65,8 +65,7 @@ public class JoinInstantMeeting {
 
 		// Load the workbook and sheet
 		ExcelWBook = new XSSFWorkbook(inputStream);
-		ExcelWSheet = ExcelWBook.getSheetAt(19);
-		AddSingleUserSheet = ExcelWBook.getSheetAt(3);
+		ExcelWSheet = ExcelWBook.getSheet("Join_InstantMeeting");
 	}
 
 	@BeforeMethod
@@ -101,8 +100,8 @@ public class JoinInstantMeeting {
 		JoinInstant.clickJoinMeeting();
 		Thread.sleep(2000);
 
-		// Input meeting link
-		JoinInstant.setMeetingLink(MeetingID);
+		// Input meeting ID
+		JoinInstant.setMeetingID(MeetingID);
 		Thread.sleep(2000);
 
 		// Click on continue
@@ -148,13 +147,30 @@ public class JoinInstantMeeting {
 
 		// Input meeting link
 		JoinInstant.setMeetingLink(MeetingLink);
+		System.out.println("Extracted Meeting Link: [" + MeetingLink + "]");
 		Thread.sleep(2000);
 
 		// Click on continue
 		JoinInstant.clickContinue();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 
+		/*// Store the current window handle
+		String originalWindow = driver.getWindowHandle();
+
+		// Wait for the new tab to open and switch to it
+		for (String windowHandle : driver.getWindowHandles()) {
+			if (!originalWindow.contentEquals(windowHandle)) {
+				driver.switchTo().window(windowHandle);
+				break;
+			}
+		}
+
+		// Close the new tab and switch back to the original window
+		driver.close();
+		Thread.sleep(2000);
+		driver.switchTo().window(originalWindow);*/
 	}
+
 
 	@AfterMethod
 	public void Aftermethod2(ITestResult result) throws IOException {

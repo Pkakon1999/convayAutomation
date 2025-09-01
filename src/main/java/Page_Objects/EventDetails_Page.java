@@ -14,7 +14,7 @@ public class EventDetails_Page {
 	// Define locators
 	By sceduler_loc = By.xpath("//div[contains(@class,'cnv-open-box')]");
 	By cancel_loc = By.xpath("//button[@id='cancel-schedule']");
-	By eventDetails_loc = By.xpath("//a[@id='event-details']");
+	By eventDetails_loc = By.xpath("//a[normalize-space()='Event Details']");
 
 	// Constructor
 	public EventDetails_Page(WebDriver driver) {
@@ -30,7 +30,7 @@ public class EventDetails_Page {
 
 	public WebElement getCardContainer() {
 		// Locate the scrollable container element within the card
-		return driver.findElement(By.xpath("//body/div[@id='root']/div[@class='cnv-wrapper cnv-theme-light']/div[@class='cnv-content-area']/div[@class='cnv-content']/div[@id='portalForModal']/div[@class='cnv-container-fluid Scheduler_main__F23x0']/div[@class='Scheduler_scheduleCreate__2kizM']/div[@class='cnv-container']/div[@class='cnv-card schedule-create-custom']/div[@class='cnv-card-body']/div[@id='taber1']/div[@id='event-details']/div/div[1]"));
+		return driver.findElement(By.xpath("//div[@class='cnv-card schedule-create-custom']"));
 	}
 
 	// Method to click Event Details

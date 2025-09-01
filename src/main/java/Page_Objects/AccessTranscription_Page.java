@@ -15,9 +15,10 @@ public class AccessTranscription_Page {
 
 	// Define locators
 	By meetingManagement_loc = By.xpath("//span[normalize-space()='Meeting Management']");
-	By selectPreviousMeeting_loc = By.xpath("//a[@id='previous-meeting']");
-	By selectMeeting_loc = By.xpath("//div[@class='cnv-flex-one']");
-	By transcription_loc = By.xpath("//a[@id='transcription']");
+	By selectPreviousMeeting_loc = By.xpath("//a[normalize-space()='Previous Meeting']");
+	By selectMeeting_loc = By.xpath("//div[@class='cnv-meeting-right-area cnv-ml-3']//div//div[@class='cnv-tab-container']");
+	By dropdown_loc = By.xpath("//span[@class='TabsComponent_dropdown-btn__DZfoP']");
+	By transcription_loc = By.xpath("//a[normalize-space()='Transcription']");
 	By meetingMinutes_loc = By.xpath("//div[@class='trans-btn-options-First']");
 	
 	
@@ -43,6 +44,11 @@ public class AccessTranscription_Page {
 	public void selectMeeting() {
 		driver.findElement(selectMeeting_loc).click();
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	}
+
+	// Method to click on dropdown
+	public void clickDropdown() {
+		driver.findElement(dropdown_loc).click();
 	}
 
 	// Method to click on Transcription tab

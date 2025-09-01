@@ -81,7 +81,7 @@ public class FilterByStatus {
 
 		// Select Owner from dropdown
 		filterByStatusPage.selectActive();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 	}
 
@@ -112,7 +112,7 @@ public class FilterByStatus {
 
 		// Select Owner from dropdown
 		filterByStatusPage.selectInvited();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 	}
 
@@ -143,7 +143,7 @@ public class FilterByStatus {
 
 		// Select Owner from dropdown
 		filterByStatusPage.selectSuspended();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 	}
 

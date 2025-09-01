@@ -32,8 +32,7 @@ public class printDbOutput_ForgetPassword {
 			// Step 2: Create a statement
 			statement = connection.createStatement();
 
-			// Step 3: Execute the SQL query to fetch the activation link based on the
-			// provided email
+			// Step 3: Execute the SQL query to fetch the activation link based on the provided email
 			String query = "SELECT token FROM sit_password_reset_token WHERE id = '" + id + "'";
 			resultSet = statement.executeQuery(query);
 

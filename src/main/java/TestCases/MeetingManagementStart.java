@@ -86,7 +86,7 @@ public class MeetingManagementStart {
 
 		// Click on meeting management
 		upcomingStart.clickMeetingManagement();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 		// Click on start schedule meeting
 		upcomingStart.clickStartSchedule();
@@ -120,7 +120,7 @@ public class MeetingManagementStart {
 
 		// Click on meeting management
 		upcomingStart.clickMeetingManagement();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 
 		// Click on start schedule meeting
 		upcomingStart.clickStartSchedule();

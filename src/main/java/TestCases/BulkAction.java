@@ -78,6 +78,14 @@ public class BulkAction {
 		bulkActionPage.clickManageUsers();
 		Thread.sleep(2000);
 
+		// Click on "Status"
+		bulkActionPage.clickStatus();
+		Thread.sleep(2000);
+
+		// Click on "Select Active"
+		bulkActionPage.selectActive();
+		Thread.sleep(2000);
+
 		// Hover over the row to make the checkbox visible
 		bulkActionPage.hoverOverRow1();
 		Thread.sleep(2000);
@@ -143,6 +151,14 @@ public class BulkAction {
 		bulkActionPage.clickManageUsers();
 		Thread.sleep(2000);
 
+		// Click on "Status"
+		bulkActionPage.clickStatus();
+		Thread.sleep(2000);
+
+		// Click on "Select Active"
+		bulkActionPage.selectActive();
+		Thread.sleep(2000);
+
 		// Hover over the row to make the checkbox visible
 		bulkActionPage.hoverOverRow1();
 		Thread.sleep(2000);
@@ -194,13 +210,12 @@ public class BulkAction {
 		bulkActionPage.clickManageUsers();
 		Thread.sleep(2000);
 
-		// Click on "Role Dropdown"
-		Thread.sleep(2000);
-		suspendUserPage.roleDropdown();
+		// Click on "Status"
+		bulkActionPage.clickStatus();
 		Thread.sleep(2000);
 
-		// Select Suspend from dropdown
-		suspendUserPage.selectSuspended();
+		// Click on "Select Suspened"
+		bulkActionPage.selectSuspened();
 		Thread.sleep(2000);
 
 		// Hover over the row to make the checkbox visible
@@ -219,11 +234,11 @@ public class BulkAction {
 		bulkActionPage.select2ndUser();
 		Thread.sleep(2000);
 
-		// Click on the Suspend User
+		// Click on the Active User
 		bulkActionPage.clickActive();
 		Thread.sleep(2000);
 
-		// Click on No
+		// Click on Yes
 		bulkActionPage.clickActiveYes();
 		Thread.sleep(2000);
 
@@ -254,13 +269,12 @@ public class BulkAction {
 		bulkActionPage.clickManageUsers();
 		Thread.sleep(2000);
 
-		// Click on "Role Dropdown"
-		Thread.sleep(2000);
-		resendInvitationPage.roleDropdown();
+		// Click on "Status"
+		bulkActionPage.clickStatus();
 		Thread.sleep(2000);
 
-		// Select Suspend from dropdown
-		resendInvitationPage.selectInvited();
+		// Click on "Select Invited"
+		bulkActionPage.selectInvited();
 		Thread.sleep(2000);
 
 		// Hover over the row to make the checkbox visible

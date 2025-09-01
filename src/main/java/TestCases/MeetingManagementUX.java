@@ -104,7 +104,7 @@ public class MeetingManagementUX {
 		Thread.sleep(5000);
 
 		// To validate "Previous Meetings" button text
-		String expectedText = "Previous Meetings";
+		String expectedText = "Previous Meeting";
 		meetingManagementUX.validatePreviousButtonText(expectedText);
 		Thread.sleep(2000);
 

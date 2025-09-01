@@ -4,6 +4,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProfilePicture_Page {
@@ -18,13 +19,14 @@ public class ProfilePicture_Page {
 
     // Locators
 
-    By dropDownByName = By.xpath("//span[@class='user-name']");
+    By dropDownByName = By.xpath("//span[@class='user-name']//*[name()='svg']");
     By btn_profile_loc = By.xpath("//a[normalize-space()='Profile']");
     By btn_change_loc = By.xpath("//a[normalize-space()='Change']");
     By file_input_loc = By.xpath("//input[@type='file']"); // Locator for file input
     By btn_remove_loc = By.xpath("//a[normalize-space()='Remove']");
-    By btn_cancel_loc = By.xpath("//button[normalize-space()='Cancel']");
     By btn_add_loc = By.xpath("//button[normalize-space()='Add']");
+    By btn_acceptCookies_loc = By.xpath("//button[@data-cky-tag='accept-button']");
+    By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");
 
     // Action methods
 
@@ -45,16 +47,23 @@ public class ProfilePicture_Page {
         driver.findElement(btn_remove_loc).click();
     }
 
-    public void clickCancel() {
-        driver.findElement(btn_cancel_loc).click();
-    }
+	public void clickAdd() {
+		driver.findElement(btn_add_loc).click();
+	}
 
-    public void clickAdd() {
-        driver.findElement(btn_add_loc).click();
-    }
+	// Method to click on Accept Cookie button
+	public void clickAccept() {
+		driver.findElement(btn_acceptCookies_loc).click();
+	}
 
-    public void uploadProfilePicture(String profilePicturePath) {
+	public void uploadProfilePicture(String profilePicturePath) {
         WebElement fileInput = driver.findElement(file_input_loc);
         fileInput.sendKeys(profilePicturePath); // Send the file path to the input element
     }
+	
+	public String getToasterValue() {
+		// Wait for the toaster message to be visible and return its text
+		WebElement toasterMessageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(toaster_Message));
+		return toasterMessageElement.getText();
+	}
 }

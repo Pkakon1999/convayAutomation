@@ -10,7 +10,7 @@ import org.testng.annotations.AfterMethod;
 import Utilities.Take_Screenshot;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BrowserLounching {
+public class BrowserLaunching {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub

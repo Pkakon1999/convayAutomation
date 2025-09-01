@@ -14,7 +14,9 @@ public class CopyInvitationCalendar_Page {
 
 	// Define locators
 	By sceduler_loc = By.xpath("//div[contains(@class,'cnv-open-box')]");
+	By save_loc = By.xpath("//button[@id='save-schedule']");
 	By cancel_loc = By.xpath("//button[@id='cancel-schedule']");
+	By ok_loc = By.xpath("//button[normalize-space()='Ok']");
 	By meeting_loc = By.xpath("//div[contains(@class,'cnv-calendar-event-meta')]");
 	By copy_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[25]/div[1]/div[1]/div[2]/div[1]/div[2]/*[name()='svg'][1]");
 	By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");
@@ -31,9 +33,21 @@ public class CopyInvitationCalendar_Page {
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
-	public WebElement getCardContainer() {
+	/*public WebElement getCardContainer() {
 		// Locate the scrollable container element within the card
 		return driver.findElement(By.xpath("//body/div[@id='root']/div[@class='cnv-wrapper cnv-theme-light']/div[@class='cnv-content-area']/div[@class='cnv-content']/div[@id='portalForModal']/div[@class='cnv-container-fluid Scheduler_main__F23x0']/div[@class='Scheduler_scheduleCreate__2kizM']/div[@class='cnv-container']/div[@class='cnv-card schedule-create-custom']/div[@class='cnv-card-body']/div[@id='taber1']/div[@id='event-details']/div/div[1]"));
+	}*/
+
+	// Method to click on Save button
+	public void clickSave() {
+		driver.findElement(save_loc).click();
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	}
+
+	// Method to click on OK button
+	public void clickOK() {
+		driver.findElement(ok_loc).click();
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
 	// Method to click on cancel button

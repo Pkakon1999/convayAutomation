@@ -13,7 +13,7 @@ public class DeclineInvitation_Page {
 	WebDriverWait wait;
 
 	// Define locators
-	By btn_decline = By.xpath("//span[normalize-space()='Decline']");
+	By btn_decline = By.xpath("//body/div[@id='root']/div[@class='cnv-wrapper cnv-theme-light']/div[@class='cnv-content-area']/div[@class='cnv-content']/div[@id='portalForModal']/div[1]/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[2]/span[1]");
 	By btn_cancel = By.xpath("//button[@class='cnv-btn cnv-btn-cancel-new cnv-mr-3']");
 	By btn_decline_loc = By.xpath("//button[normalize-space()='Decline']");
 	By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");

@@ -23,8 +23,8 @@ public class AddSingleUser_Page {
 	By roleDropdown1 = By.xpath("//div[@class='cnv-select-with-label']//*[name()='svg']");
 	By roleDropdown2 = By.xpath("//li[normalize-space()='Admin']");
 	By roleDropdown3 = By.xpath("//li[normalize-space()='Owner']");
-	By btn_AddUser = By.xpath("//input[@value='Add User']");
-	By errorMessage = By.xpath("//p[normalize-space()='User already exist']");
+	By btn_AddUser = By.xpath("//span[normalize-space()='Add User']");
+	By errorMessage = By.xpath("//p[normalize-space()='User already exists']");
 	By successMessage = By.xpath("//h2[normalize-space()='Invitations Sent']");
 
 	// Constructor

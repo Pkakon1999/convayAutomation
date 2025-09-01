@@ -28,7 +28,7 @@ import Utilities.Take_Screenshot;
 import Page_Objects.JoinMeetingFromLandingPage_Page;
 import Page_Objects.JoinWithMeetingLink_Page;
 
-public class JoinMeetingWithMeetingLink {
+public class JoinWithMeetingLink {
 
 	WebDriver driver;
 	XSSFWorkbook ExcelWBook;
@@ -46,7 +46,7 @@ public class JoinMeetingWithMeetingLink {
 
 		// Load the workbook and sheet
 		ExcelWBook = new XSSFWorkbook(inputStream);
-		ExcelWSheet = ExcelWBook.getSheetAt(17);
+		ExcelWSheet = ExcelWBook.getSheet("JoinFromLanding");
 	}
 
 	@BeforeMethod

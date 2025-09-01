@@ -12,10 +12,10 @@ public class PreviousMeetingDetails_Page {
 
 	// Define locators
 	By meetingManagement_loc = By.xpath("//span[normalize-space()='Meeting Management']");
-	By btn_PreviousMeeting = By.xpath("//a[@id='previous-meeting']");
+	By btn_PreviousMeeting = By.xpath("//a[normalize-space()='Previous Meeting']");
 	By meetingHostField_loc = By.xpath("//div[@class='cnv-text-host cnv-mt-1']");
 	By meetingIDField_loc = By.xpath("//div[@class='cnv-text-host cnv-mt-2']");
-	By meetingURLField_loc = By.xpath("//div[@class='cnv-scroll-400']//div[3]");
+	By meetingURLField_loc = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/span[1]/a[1]");
 
 	// Constructor
 	public PreviousMeetingDetails_Page(WebDriver driver) {

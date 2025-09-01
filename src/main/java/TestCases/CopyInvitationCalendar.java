@@ -61,10 +61,41 @@ public class CopyInvitationCalendar {
 		lp.setUserName(username);
 		lp.setPassword(password);
 		lp.clickLogin();
-		Thread.sleep(4000); // Wait for login to complete
+		Thread.sleep(6000); // Wait for login to complete
+	}
+	
+	@Test(priority = 1) // Test case to save a schedule meeting
+	void SaveSchedule() throws InterruptedException {
+		// Navigate to the Start meeting option after login
+		CopyInvitationCalendar_Page calendar = new CopyInvitationCalendar_Page(driver);
+
+		// Click on Scheduler
+		calendar.clickScheduler();
+		Thread.sleep(6000);
+
+		// Click on Save button
+		calendar.clickSave();
+		Thread.sleep(3000);
+
+		// Click on OK button
+		calendar.clickOK();
+		Thread.sleep(4000);
+
+		String getToasterValue = calendar.getToasterValue();
+
+		// Verify the toaster message text
+		Assert.assertEquals(getToasterValue,"Successfully scheduled Kakon Paul Avi's scheduled meeting");
+
 	}
 
-	@Test(priority = 1) // Test case to validate Copy meeting invitation from calendar
+	@AfterMethod
+	public void captureFailureScreenshot1(ITestResult result) throws IOException {
+		if (ITestResult.FAILURE == result.getStatus()) {
+			Take_Screenshot.TakeScreenshot(driver, result.getName());
+		}
+	}
+
+	@Test(priority = 2) // Test case to validate Copy meeting invitation from calendar
 	void copyInvitation() throws InterruptedException {
 		// Navigate to the Start meeting option after login
 		CopyInvitationCalendar_Page calendar = new CopyInvitationCalendar_Page(driver);
@@ -96,7 +127,7 @@ public class CopyInvitationCalendar {
 	}
 
 	@AfterMethod
-	public void captureFailureScreenshot1(ITestResult result) throws IOException {
+	public void captureFailureScreenshot2(ITestResult result) throws IOException {
 		if (ITestResult.FAILURE == result.getStatus()) {
 			Take_Screenshot.TakeScreenshot(driver, result.getName());
 		}

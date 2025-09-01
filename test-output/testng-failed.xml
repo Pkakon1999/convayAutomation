@@ -6,9 +6,10 @@
       <class name="TestCases.UpcomingMeetingUX">
         <methods>
           <include name="teardown"/>
+          <include name="UpcomingUX2"/>
           <include name="captureFailureScreenshot3"/>
+          <include name="UpcomingUX3"/>
           <include name="captureFailureScreenshot2"/>
-          <include name="UpcomingUXValiateURL"/>
           <include name="captureFailureScreenshot1"/>
           <include name="navigateToHomePage2"/>
           <include name="setup"/>

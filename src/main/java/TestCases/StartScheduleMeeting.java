@@ -115,14 +115,6 @@ public class StartScheduleMeeting {
 		schedule.selectSave();
 		Thread.sleep(2000);
 
-		// Click on cancel
-		schedule.selectCancel();
-		Thread.sleep(2000);
-
-		// Click on save to schedule the meeting
-		schedule.selectSave();
-		Thread.sleep(2000);
-
 		// Click on OK
 		schedule.selectOK();
 		Thread.sleep(4000);

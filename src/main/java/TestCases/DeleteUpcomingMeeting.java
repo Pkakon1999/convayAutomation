@@ -66,7 +66,7 @@ public class DeleteUpcomingMeeting {
 
 	@Test(priority = 1) // Test case to validate Delete upcoming meeting
 	void copyInvitation() throws InterruptedException {
-		// Navigate to the Start meeting option after login
+		// Navigate to the upcoming meeting section after login
 		DeleteUpcomingMeeting_Page delete = new DeleteUpcomingMeeting_Page(driver);
 
 		// Click on three dot

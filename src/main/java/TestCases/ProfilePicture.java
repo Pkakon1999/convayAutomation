@@ -63,10 +63,48 @@ public class ProfilePicture {
 		lp.clickLogin();
 		Thread.sleep(2000); // Wait for login to complete
 	}
-
-	@Test(priority = 1) // Add a profile picture
+	
+	@Test(priority = 1) // Remove a profile picture
 	public void ProfilePicture_Page1() throws InterruptedException {
 	    ProfilePicture_Page profilePicturePage = new ProfilePicture_Page(driver);
+	    
+	    Thread.sleep(2000);
+	    profilePicturePage.clickAccept();
+	    Thread.sleep(2000);
+	    
+	    // Open dropdown to access Profile
+	    profilePicturePage.clickdropDown();
+	    Thread.sleep(2000);
+
+	    // Open Profile Page
+	    profilePicturePage.clickProfile();
+	    Thread.sleep(2000);
+
+	    // Click on 'Remove' button to remove profile picture
+	    profilePicturePage.clickRemove();
+	    Thread.sleep(2000);
+	    
+	    String getToasterValue = profilePicturePage.getToasterValue();
+
+		// Verify the toaster message text
+		Assert.assertEquals(getToasterValue, "Your profile picture has been removed");
+
+	}
+
+	@AfterMethod
+	public void captureScreenshotOnFailure1(ITestResult result) throws IOException {
+		if (ITestResult.FAILURE == result.getStatus()) {
+			Take_Screenshot.TakeScreenshot(driver, result.getName());
+		}
+	}
+
+	@Test(priority = 2) // Add a profile picture
+	public void ProfilePicture_Page2() throws InterruptedException {
+	    ProfilePicture_Page profilePicturePage = new ProfilePicture_Page(driver);
+	    
+	    Thread.sleep(2000);
+	    profilePicturePage.clickAccept();
+	    Thread.sleep(2000);
 	    
 	    // Open dropdown to access Profile
 	    profilePicturePage.clickdropDown();
@@ -81,7 +119,7 @@ public class ProfilePicture {
 	    Thread.sleep(2000);
 
 	    // Correct the path to the profile picture
-	    String profilePicturePath = "TestData\\Picture_One.jpg";
+	    String profilePicturePath = new File ("TestData\\Picture_One.jpg").getAbsolutePath();
 
 	    // Upload the profile picture by sending the file path directly to the input element
 	    profilePicturePage.uploadProfilePicture(profilePicturePath);
@@ -91,19 +129,11 @@ public class ProfilePicture {
 	    profilePicturePage.clickAdd();
 	    Thread.sleep(2000);
 
-	    String expectedImgSrc = "https://convay.com/services/file-service/file/downloadFile/";
+	    String getToasterValue = profilePicturePage.getToasterValue();
 
-	    // Locate the uploaded profile picture element
-	    WebElement profilePictureElement = driver.findElement(By.xpath("//a[@class='cnv-profile-icon cnv-link']//img"));
-	    String actualImgSrc = profilePictureElement.getAttribute("src");
-
-	    // Print the actual image src to help with debugging
-	    System.out.println("Actual Image Source: " + actualImgSrc);
-
-	    // Assert that the profile picture's source matches the expected source
-	    Assert.assertTrue(actualImgSrc.contains(expectedImgSrc), "Profile picture upload failed: Image source does not match.");
+		// Verify the toaster message text
+		Assert.assertEquals(getToasterValue, "Profile picture updated successfully");
 	}
-
 
 
 	@AfterMethod
@@ -113,38 +143,5 @@ public class ProfilePicture {
 		}
 	}
 	
-
-	@Test(priority = 2) // Remove a profile picture
-	public void ProfilePicture_Page2() throws InterruptedException {
-	    ProfilePicture_Page profilePicturePage = new ProfilePicture_Page(driver);
-	    
-	    // Open dropdown to access Profile
-	    profilePicturePage.clickdropDown();
-	    Thread.sleep(2000);
-
-	    // Open Profile Page
-	    profilePicturePage.clickProfile();
-	    Thread.sleep(2000);
-
-	    // Click on Change button to open file input
-	    profilePicturePage.clickRemove();
-	    Thread.sleep(2000);
-
-	}
-
-	@AfterMethod
-	public void captureScreenshotOnFailure1(ITestResult result) throws IOException {
-		if (ITestResult.FAILURE == result.getStatus()) {
-			Take_Screenshot.TakeScreenshot(driver, result.getName());
-		}
-	}
-	 
-
-	@AfterClass
-	void teardown() throws IOException {
-		// Close the workbook and the browser after the tests
-		ExcelWBook.close();
-		driver.close();
-	}
 
 }

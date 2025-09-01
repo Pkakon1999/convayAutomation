@@ -63,7 +63,7 @@ public class DeleteUser {
 	}
 
 	@Test(priority = 1) // Test case to delete a user
-	void FilterByStatus_Active() throws InterruptedException {
+	void deleteUser() throws InterruptedException {
 		// Navigate to the Manage User page after login
 		DeleteUser_Page deleteUserPage = new DeleteUser_Page(driver);
 
@@ -90,7 +90,7 @@ public class DeleteUser {
 		String getToasterValue = deleteUserPage.getToasterValue();
 
 		// Verify the toaster message text
-		Assert.assertEquals(getToasterValue, "User(s) deleted");
+		Assert.assertEquals(getToasterValue, "User Deleted Successfully");
 	}
 
 	@AfterMethod
@@ -101,7 +101,7 @@ public class DeleteUser {
 	}
 
 	@Test(priority = 2) // Test case to check deleted user is existing or not
-	void FilterByStatus() throws InterruptedException {
+	void checkUser() throws InterruptedException {
 		// Navigate to the Manage User page after login
 		DeleteUser_Page deleteUserPage = new DeleteUser_Page(driver);
 
@@ -111,7 +111,7 @@ public class DeleteUser {
 
 		// Click on "Manage Users"
 		deleteUserPage.clickManageUsers();
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 	}
 
 	@AfterMethod
@@ -123,6 +123,7 @@ public class DeleteUser {
 
 	@Test(priority = 3) // Test case to check the deleted user can login or not
 	void deletededUserLogin() throws InterruptedException {
+		DeleteUser_Page deleteUserPage = new DeleteUser_Page(driver);
 
 		// Login before add users
 		driver.get("https://meet2.synesisit.info/sign-in");
@@ -130,8 +131,8 @@ public class DeleteUser {
 		AddSingleUserSheet = ExcelWBook.getSheetAt(14);
 
 		// Reading the first row's first and second cells for username and password
-		String username = AddSingleUserSheet.getRow(1).getCell(0).toString();
-		String password = AddSingleUserSheet.getRow(1).getCell(1).toString();
+		String username = AddSingleUserSheet.getRow(0).getCell(0).toString();
+		String password = AddSingleUserSheet.getRow(0).getCell(1).toString();
 
 		// Perform Login (using your Login_Page)
 		Login_Page lp = new Login_Page(driver);
@@ -147,6 +148,11 @@ public class DeleteUser {
 
 		// To check page validation
 		String expectedUrl = "https://meet2.synesisit.info/sign-in";
+
+		// To validate error message text
+		String expectedText = "Account suspended. Contact your admin.";
+		deleteUserPage.getMessageText(expectedText);
+		Thread.sleep(2000);
 
 		Assert.assertEquals(currentUrl, expectedUrl, "Deleted user is still able to login.");
 	}

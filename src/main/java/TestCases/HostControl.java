@@ -63,7 +63,7 @@ public class HostControl {
 		lp.setUserName(username);
 		lp.setPassword(password);
 		lp.clickLogin();
-		Thread.sleep(3000); // Wait for login to complete
+		Thread.sleep(15000); // Wait for login to complete
 	}
 
 	@Test(priority = 1) // Test case to access Host Control from Scheduler
@@ -73,11 +73,11 @@ public class HostControl {
 
 	    // Click on OpenScheduler
 	    control.clickScheduler();
-	    Thread.sleep(3000);
+	    Thread.sleep(5000);
 
 	    // Click on Host Control
 	    control.clickHostControl();
-	    Thread.sleep(3000);
+	    Thread.sleep(5000);
 
 	    // Get the scrollable card container
 	    JavascriptExecutor js = (JavascriptExecutor) driver;

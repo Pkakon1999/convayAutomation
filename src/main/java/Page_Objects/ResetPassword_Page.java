@@ -29,6 +29,7 @@ public class ResetPassword_Page {
     By btn_saveChange_loc = By.xpath("//input[@id='submit_email_pass']");
     By toaster_PasswordNotChanged = By.xpath("//div[@class='cnv-toast-body']");
     By toaster_PasswordChanged = By.xpath("//div[@class='cnv-toast-body']");
+    By errorMessage = By.xpath("//div[@class='cnv-form-group']//div[1]");
 
     // Action methods
     public void clickdropDown() {
@@ -74,5 +75,9 @@ public class ResetPassword_Page {
         // Wait for the toaster message to be visible and return its text
         WebElement toasterMessageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(toaster_PasswordChanged));
         return toasterMessageElement.getText();
+    }
+    
+    public String getErrorMessage() {
+        return driver.findElement(errorMessage).getText();
     }
 }

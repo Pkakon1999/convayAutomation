@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EditUserInfo_Page {
@@ -24,12 +25,13 @@ public class EditUserInfo_Page {
 	By btn_editProfileInfo_loc = By.xpath("//div[@class='cnv-col-12']//a[contains(text(),'Edit')]");
 	By txt_firstName_loc1 = By.xpath("//input[@placeholder='Enter First Name']");
 	By txt_lastName_loc1 = By.xpath("//input[@placeholder='Enter Last Name']");
-	By txt_phoneNumber_loc1 = By.xpath("//input[@placeholder='Enter Phone Number']");
+	By txt_phoneNumber_loc1 = By.xpath("//input[@placeholder='1 (702) 123-4567']");
 	By txt_firstName_loc2 = By.xpath("//div[@class='cnv-col-12']//span[contains(text(),'Kakon Paul Avi')]");
 	By txt_lastName_loc2 = By.xpath("//input[@placeholder='Enter Last Name']");
-	By txt_phoneNumber_loc2 = By.xpath("//input[@placeholder='Enter Phone Number']");
+	By txt_phoneNumber_loc2 = By.xpath("//input[@placeholder='1 (702) 123-4567']");
 	By btn_cancel_loc = By.xpath("//a[normalize-space()='Cancel']");
 	By btn_saveChange_loc = By.xpath("//input[@id='submit_email_pass']");
+	By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");
 
 	// Action methods
 
@@ -115,5 +117,11 @@ public class EditUserInfo_Page {
 	// Method to get the value of the phone number field
 	public String getPhoneNumberValue() {
 		return driver.findElement(txt_phoneNumber_loc2).getAttribute("value");
+	}
+
+	public String getToasterValue(String expectedText) {
+		// Wait for the toaster message to be visible and return its text
+		WebElement toasterMessageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(toaster_Message));
+		return toasterMessageElement.getText();
 	}
 }

@@ -77,7 +77,7 @@ public class AddParticipants {
 
 		// Click on Event Details
 		add.clickEventDetails();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		// Get the scrollable card container
 		JavascriptExecutor js = (JavascriptExecutor) driver;

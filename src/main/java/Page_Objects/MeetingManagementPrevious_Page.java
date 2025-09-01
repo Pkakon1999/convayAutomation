@@ -15,7 +15,7 @@ public class MeetingManagementPrevious_Page {
 
 	// Define locators
 	By meetingManagement_loc = By.xpath("//span[normalize-space()='Meeting Management']");
-	By btn_previousMeeting = By.xpath("//a[@id='previous-meeting']");
+	By btn_previousMeeting = By.xpath("//a[normalize-space()='Previous Meeting']");
 
 	// Constructor
 	public MeetingManagementPrevious_Page(WebDriver driver) {

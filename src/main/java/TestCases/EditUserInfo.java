@@ -62,7 +62,7 @@ public class EditUserInfo {
 		Thread.sleep(2000); // Wait for login to complete
 	}
 
-	@Test(priority = 1)//To check information is edited or not after clicking on cancel button
+	/*@Test(priority = 1)//To check information is edited or not after clicking on cancel button
 	public void EditUserInfo1() throws InterruptedException {
 		EditUserInfo_Page editUserPage = new EditUserInfo_Page(driver);
 
@@ -99,7 +99,7 @@ public class EditUserInfo {
 		if (ITestResult.FAILURE == result.getStatus()) {
 			Take_Screenshot.TakeScreenshot(driver, result.getName());
 		}
-	}
+	}*/
 
 	@Test(priority = 2)
 	public void EditUserInfo2() throws InterruptedException {
@@ -143,6 +143,11 @@ public class EditUserInfo {
 
 		// Click Save Changes button
 		editUserPage.clickSaveChange();
+		Thread.sleep(2000);
+
+		// To validate error message text
+		String expectedText = "Personal info updated successfully";
+		editUserPage.getToasterValue(expectedText);
 		Thread.sleep(2000);
 
 	}

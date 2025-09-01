@@ -46,7 +46,7 @@ public class CopyInvitationInstant {
 	@BeforeMethod
 	void navigateToHomePage2() throws InterruptedException {
 		// Login before add users
-		driver.get("https://meet2.synesisit.info/sign-in");
+		driver.get("https://convay.com/sign-in");
 
 		AddSingleUserSheet = ExcelWBook.getSheetAt(0);
 
@@ -59,17 +59,21 @@ public class CopyInvitationInstant {
 		lp.setUserName(username);
 		lp.setPassword(password);
 		lp.clickLogin();
-		Thread.sleep(4000); // Wait for login to complete
+		Thread.sleep(10000); // Wait for login to complete
 	}
 
 	@Test(priority = 1) // Test case to copy invitation from home page
-	void FilterByStatus_Active() throws InterruptedException {
-		// Navigate to the Manage User page after login
+	void copyInvitation() throws InterruptedException {
+		// Navigate to the copy invitation button after login
 		CopyInvitationInstant_Page copyInvitation = new CopyInvitationInstant_Page(driver);
+
+		// Click on Accept All
+		copyInvitation.clickAccept();
+		Thread.sleep(2000);
 
 		// Click on Copy Invitation
 		copyInvitation.clickCopy();
-		Thread.sleep(2000);
+		//Thread.sleep(4000);
 		
 		String getToasterValue = copyInvitation.getToasterValue();
 
@@ -78,7 +82,7 @@ public class CopyInvitationInstant {
 				+ "Kakon Paul Avi is inviting you to a meeting on Convay.\n"
 				+ "Meeting ID:\n"
 				+ "6477 1284 0966\n"
-				+ "Meeting Link: https://meet2.synesisit.info/m/j/647712840966/kakonpaulavi");
+				+ "Meeting Link: https://convay.com/m/j/647712840966/kakonpaulavi");
 		
 		Assert.assertEquals(getToasterValue, "Invitation text format does not match expected pattern!");
 	}

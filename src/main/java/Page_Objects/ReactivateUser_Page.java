@@ -17,7 +17,7 @@ public class ReactivateUser_Page {
 	By btn_ManageUsers = By.xpath("//span[normalize-space()='Manage Users']");
 	By StatusDropdown_loc = By.xpath("//div[@class='UnitType_userOptionPanel__3JDe3']//div[2]//div[1]//*[name()='svg']");
 	By SelectActive_loc = By.xpath("//label[normalize-space()='Active']");
-	By SelectSuspended_loc = By.xpath("//label[normalize-space()='Suspended']");
+	By SelectSuspended_loc = By.xpath("//label[normalize-space()='Suspened']");
 	By btn_threeDot = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[7]/div[1]/span[1]/span[1]");
 	By btn_ReactivateUser_loc = By.xpath("//div[@class='cnv-content']//li[1]");
 	By btn_confirmActivation_loc = By.xpath("//button[normalize-space()='Confirm Activation']");

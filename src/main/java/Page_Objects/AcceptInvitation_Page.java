@@ -13,7 +13,7 @@ public class AcceptInvitation_Page {
 	WebDriverWait wait;
 
 	// Define locators
-	By btn_accept = By.xpath("//div[@class='cnv-btn cnv-p-1 InvitationCard_acceptButton__3DmT0']");
+	By btn_accept = By.xpath("//body/div[@id='root']/div[@class='cnv-wrapper cnv-theme-light']/div[@class='cnv-content-area']/div[@class='cnv-content']/div[@id='portalForModal']/div[1]/div[1]/div[3]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]");
 	By btn_cancel = By.xpath("//button[@class='cnv-btn cnv-btn-cancel-new cnv-mr-3']");
 	By btn_accept_loc = By.xpath("//button[normalize-space()='Accept']");
 	By toaster_Message = By.xpath("//div[@class='cnv-toast-body']");

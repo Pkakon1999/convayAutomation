@@ -63,7 +63,7 @@ public class ResetPassword {
 	}
 
 	@Test(priority = 1) //To check password is reset or not after clicking on cancel button
-	public void ResetPassword() throws InterruptedException {
+	public void ResetPassword1() throws InterruptedException {
 		ResetPassword_Page resetPasswordPage = new ResetPassword_Page(driver);
 
 		// Open dropdown to access Profile
@@ -116,7 +116,7 @@ public class ResetPassword {
 		Thread.sleep(2000);
 
 		// Load the new sheet for user data
-		ExcelWSheet = ExcelWBook.getSheetAt(7);
+		ExcelWSheet = ExcelWBook.getSheet("ResetPassword");
 
 		// Reading new user data from the Excel sheet
 		String oldPass = ExcelWSheet.getRow(0).getCell(0).toString();
@@ -172,7 +172,7 @@ public class ResetPassword {
 		Thread.sleep(2000);
 
 		// Load the new sheet for user data
-		ExcelWSheet = ExcelWBook.getSheetAt(7);
+		ExcelWSheet = ExcelWBook.getSheet("ResetPassword");
 
 		// Reading new user data from the Excel sheet
 		String oldPass = ExcelWSheet.getRow(1).getCell(0).toString();
@@ -192,6 +192,12 @@ public class ResetPassword {
 		// Click Save Changes button
 		resetPasswordPage.clickSaveChange();
 		Thread.sleep(2000);
+
+		String checkErrorMessage = resetPasswordPage.getErrorMessage();
+
+		// Verify the error message text
+		Assert.assertEquals(checkErrorMessage, "The password doesn't match");
+
 	}
 
 	@AfterMethod
@@ -222,7 +228,7 @@ public class ResetPassword {
 		Thread.sleep(2000);
 
 		// Load the new sheet for user data
-		ExcelWSheet = ExcelWBook.getSheetAt(7);
+		ExcelWSheet = ExcelWBook.getSheet("ResetPassword");
 
 		// Reading new user data from the Excel sheet
 		String oldPass = ExcelWSheet.getRow(2).getCell(0).toString();

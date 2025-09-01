@@ -12,7 +12,7 @@ public class MeetingManagementStart_Page {
 
 	// Define locators
 	By meetingManagement_loc = By.xpath("//span[normalize-space()='Meeting Management']");
-	By startScheduledMeeting_loc = By.xpath("//span[contains(@class,'UpcomingPrevious_buttonHover__tbVyE')]");
+	By startScheduledMeeting_loc = By.xpath("//span[contains(@class,'undefined')]");
 	By btn_Start = By.xpath("//button[@id='startButton']");
 	By btn_cross_loc = By.xpath("//div[@class='cnv-start-up-modal-left']");
 	

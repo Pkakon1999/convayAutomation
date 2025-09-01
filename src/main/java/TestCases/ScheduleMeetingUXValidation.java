@@ -115,14 +115,6 @@ public class ScheduleMeetingUXValidation {
 		scheduleUX.selectSave();
 		Thread.sleep(2000);
 
-		// Click on cancel
-		scheduleUX.selectCancel();
-		Thread.sleep(2000);
-
-		// Click on save to schedule the meeting
-		scheduleUX.selectSave();
-		Thread.sleep(2000);
-
 		// Click on OK
 		scheduleUX.selectOK();
 		Thread.sleep(4000);

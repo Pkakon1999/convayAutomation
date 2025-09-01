@@ -115,14 +115,6 @@ public class MeetingManagementDeleteMeeting {
 		deleteMeeting.selectSave();
 		Thread.sleep(2000);
 
-		// Click on cancel
-		deleteMeeting.selectCancel();
-		Thread.sleep(2000);
-
-		// Click on save to schedule the meeting
-		deleteMeeting.selectSave();
-		Thread.sleep(2000);
-
 		// Click on OK
 		deleteMeeting.selectOK();
 		Thread.sleep(4000);

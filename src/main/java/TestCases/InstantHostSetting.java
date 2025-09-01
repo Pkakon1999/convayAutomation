@@ -27,7 +27,7 @@ import Page_Objects.Instant_HostSetting_Page;
 import Page_Objects.Login_Page;
 import Utilities.Take_Screenshot;
 
-public class Instant_HostSetting {
+public class InstantHostSetting {
 
 	WebDriver driver;
 	XSSFWorkbook ExcelWBook;
@@ -79,7 +79,7 @@ public class Instant_HostSetting {
 		lp.setUserName(username);
 		lp.setPassword(password);
 		lp.clickLogin();
-		Thread.sleep(3000); // Wait for login to complete
+		Thread.sleep(20000); // Wait for login to complete
 	}
 
 	@Test(priority = 1) // Test case to access Host Control for instant meeting

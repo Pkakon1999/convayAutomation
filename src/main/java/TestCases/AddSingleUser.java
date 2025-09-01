@@ -287,7 +287,7 @@ public class AddSingleUser {
 		// Get the error message and verify it
 		AddSingleUser_Page AddSingleUser_Page = new AddSingleUser_Page(driver);
 		String actualErrorMessage = AddSingleUser_Page.getErrorMessage();
-		String expectedErrorMessage = "User already exist";
+		String expectedErrorMessage = "User already exists";
 
 		Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Error message did not match.");
 	}
