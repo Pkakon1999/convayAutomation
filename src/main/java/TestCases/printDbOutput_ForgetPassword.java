@@ -17,7 +17,7 @@ public class printDbOutput_ForgetPassword {
 		String activationLink = null;
 
 		// Database connection details
-		String jdbcURL = "jdbc:mysql://meet2.synesisit.info:35559/organization_settings_v2";
+		String jdbcURL = "jdbc:mysql://meet2.synesisit.info:35559/organization_settings";
 		String dbUser = "conVeyDevloperUse1ly";
 		String dbPassword = "iZTlLI6ujUkvAul4hW";
 
@@ -33,7 +33,7 @@ public class printDbOutput_ForgetPassword {
 			statement = connection.createStatement();
 
 			// Step 3: Execute the SQL query to fetch the activation link based on the provided email
-			String query = "SELECT token FROM sit_password_reset_token WHERE id = '" + id + "'";
+			String query = "SELECT token FROM sit_password_reset_token WHERE user_id = '" + id + "'";
 			resultSet = statement.executeQuery(query);
 
 			// Step 4: Process the result
@@ -76,6 +76,8 @@ public class printDbOutput_ForgetPassword {
 
 			// Read email from the first row, first column (adjust the index if needed)
 			email = forgetPass.getRow(1).getCell(0).toString();
+			
+			System.out.println("Email fetched from Excel: " + email);
 
 			// Close workbook and file input stream
 			workbook.close();
